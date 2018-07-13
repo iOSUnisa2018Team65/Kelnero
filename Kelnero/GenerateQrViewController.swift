@@ -24,7 +24,22 @@ class GenerateQrViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func generateQr(_ sender: UIButton) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        tableNumberInputField.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+    @IBAction func generateQRButtonClicked(_ sender: UIButton) {
+        generateQr()
+    }
+    
+    @IBAction func imageViewClicked(_ sender: UITapGestureRecognizer) {
+        if imageView.image != nil {
+            shareQrImage()
+        }
+    }
+    
+    func generateQr() {
         tableNumberInputField.endEditing(true)
         let n = tableNumberInputField.text!
         if n != "" {
@@ -75,11 +90,16 @@ class GenerateQrViewController: UIViewController {
         }
     }
     
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        tableNumberInputField.endEditing(true)
-        super.touchesBegan(touches, with: event)
+    func shareQrImage() {
+        let image = imageView.image
+        // set up activity view controller
+        let imageToShare = [ image! ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
     }
+    
     
     /*
     // MARK: - Navigation
