@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B29ED5B20F8E91A00B53F65 /* QrCodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29ED5A20F8E91A00B53F65 /* QrCodeUtils.swift */; };
+		7B29ED5D20F8E9AD00B53F65 /* IcloudUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29ED5C20F8E9AD00B53F65 /* IcloudUtils.swift */; };
+		7BE10AA720F8FD3800E0239D /* GenerateQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE10AA620F8FD3800E0239D /* GenerateQrViewController.swift */; };
 		7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935320F79A58009F41B7 /* AppDelegate.swift */; };
 		7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
 		7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935720F79A58009F41B7 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B29ED5A20F8E91A00B53F65 /* QrCodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QrCodeUtils.swift; path = Utils/QrCodeUtils.swift; sourceTree = "<group>"; };
+		7B29ED5C20F8E9AD00B53F65 /* IcloudUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IcloudUtils.swift; path = Utils/IcloudUtils.swift; sourceTree = "<group>"; };
+		7BE10AA620F8FD3800E0239D /* GenerateQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQrViewController.swift; sourceTree = "<group>"; };
 		7BEA935020F79A58009F41B7 /* Kelnero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelnero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEA935320F79A58009F41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEA935520F79A58009F41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */,
 				7BEA936220F79A59009F41B7 /* Info.plist */,
 				7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */,
+				7B29ED5A20F8E91A00B53F65 /* QrCodeUtils.swift */,
+				7B29ED5C20F8E9AD00B53F65 /* IcloudUtils.swift */,
+				7BE10AA620F8FD3800E0239D /* GenerateQrViewController.swift */,
 			);
 			path = Kelnero;
 			sourceTree = "<group>";
@@ -161,8 +170,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
+				7BE10AA720F8FD3800E0239D /* GenerateQrViewController.swift in Sources */,
 				7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */,
 				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
+				7B29ED5B20F8E91A00B53F65 /* QrCodeUtils.swift in Sources */,
+				7B29ED5D20F8E9AD00B53F65 /* IcloudUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
