@@ -1,5 +1,5 @@
 //
-//  welcomeCustomerViewController.swift
+//  menuCustomerViewController.swift
 //  Kelnero
 //
 //  Created by Panariello Aniello on 13/07/18.
@@ -8,33 +8,10 @@
 
 import UIKit
 
-class welcomeCustomerViewController: UIViewController {
-    
-    var qrCode: String = ""
-    
-    @IBAction func backToQr(_ sender: Any) {
-        DispatchQueue.main.async{
-            self.dismiss(animated: false, completion: {})
-            self.performSegue(withIdentifier: "backToQr", sender: nil)
-            
-        }
-    }
-    @IBOutlet var myLabel: UILabel!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if qrCode == ""{
-            myLabel.text = "No qrcode"
-        }else{
-        myLabel.text = qrCode
-    }
-    }
+class menuCustomerViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-      navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Welcome"
- 
-       
-        
 
         // Do any additional setup after loading the view.
     }
