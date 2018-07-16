@@ -63,12 +63,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kkT-D3-PZ9">
+                                <rect key="frame" x="177" y="374" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yod-1f-wCX"/>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="3uG-LM-Jyg" id="4BZ-iK-CPh"/>
+                        <outlet property="spinner" destination="kkT-D3-PZ9" id="dLM-gr-m8P"/>
                         <outlet property="tableNumberInputField" destination="SJG-IE-oS6" id="Xh7-o6-4jO"/>
                     </connections>
                 </viewController>

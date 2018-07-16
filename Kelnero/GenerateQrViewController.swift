@@ -12,11 +12,17 @@ class GenerateQrViewController: UIViewController {
     
     @IBOutlet weak var tableNumberInputField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // tableNumberInputField.becomeFirstResponder()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        spinner.hidesWhenStopped = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,6 +37,7 @@ class GenerateQrViewController: UIViewController {
     
     @IBAction func generateQRButtonClicked(_ sender: UIButton) {
         generateQr()
+        spinner.startAnimating()
     }
     
     @IBAction func imageViewClicked(_ sender: UITapGestureRecognizer) {
@@ -76,6 +83,7 @@ class GenerateQrViewController: UIViewController {
                         // ui update must be done in main thread
                         DispatchQueue.main.async {
                             self.imageView.image = qrImage
+                            self.spinner.stopAnimating()
                         }
                     }
                 }
@@ -91,9 +99,10 @@ class GenerateQrViewController: UIViewController {
     }
     
     func shareQrImage() {
-        let alert = UIAlertController(title: "TO DO", message: "Implementare salvataggio immagine in galleria", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        self.present(alert, animated: true)
+        
+        
+       UIImageWriteToSavedPhotosAlbum(self.imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
         
         /*let image = imageView.image
         // set up activity view controller
@@ -105,6 +114,18 @@ class GenerateQrViewController: UIViewController {
         */
     }
     
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos. NON è VEROOOOOO", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
     
     /*
     // MARK: - Navigation
