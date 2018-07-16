@@ -12,11 +12,14 @@ import AVFoundation
 class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
-    var codeFinal: String!
+    
+    var codeFinal: String! // var to send info in segue
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+            
+
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
         
@@ -54,6 +57,8 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         view.layer.addSublayer(previewLayer)
         
         captureSession.startRunning()
+   
+        
     }
     
     func failed() {
@@ -95,15 +100,42 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     func found(code: String) {
         print(code)
         codeFinal = code
-        self.performSegue(withIdentifier: "welcomeCustomer", sender: nil)
+        
+        
+     sleep(1)
+        
+//
+//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let nvc = storyboard.instantiateViewController(withIdentifier: "myTabBar") as! UITabBarController
+//        self.present(nvc, animated: true, completion: nil)
+       
+        
+        DispatchQueue.main.async{
+            self.dismiss(animated: false, completion: {})
+            self.performSegue(withIdentifier: "welcomeCustomer", sender: nil)
+            
+        }
+//        dispatch_async(dispatch_get_main_queue(), {
+//            self.dismissViewControllerAnimated(false, completion: {})
+//            self.performSegueWithIdentifier("welcomeCustomer", sender: nil)
+//        })
+//        self.performSegue(withIdentifier: "welcomeCustomer", sender: nil)
+//kdjfhliszufgho
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "welcomeCustomer"){
-            let vc = segue.destination as! welcomeCustomerViewController
+            
+            let tvc = segue.destination as! MyTabBar
+            let navc = tvc.viewControllers!.first as! UINavigationController
+            let vc = navc.viewControllers.first as! welcomeCustomerViewController
+            
             vc.qrCode = codeFinal
             
         }
+ 
+                    
     }
     
     override var prefersStatusBarHidden: Bool {
