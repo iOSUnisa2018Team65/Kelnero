@@ -18,7 +18,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            
+        
 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
@@ -70,7 +70,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if (captureSession?.isRunning == false) {
             captureSession.startRunning()
         }
@@ -101,27 +101,13 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         print(code)
         codeFinal = code
         
-        
-     sleep(1)
-        
-//
-//        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let nvc = storyboard.instantiateViewController(withIdentifier: "myTabBar") as! UITabBarController
-//        self.present(nvc, animated: true, completion: nil)
-       
-        
-        DispatchQueue.main.async{
+        sleep(UInt32(0.5)) //wait half second
+    
+        DispatchQueue.main.async{   //makes the main asynchronous
             self.dismiss(animated: false, completion: {})
             self.performSegue(withIdentifier: "welcomeCustomer", sender: nil)
-            
         }
-//        dispatch_async(dispatch_get_main_queue(), {
-//            self.dismissViewControllerAnimated(false, completion: {})
-//            self.performSegueWithIdentifier("welcomeCustomer", sender: nil)
-//        })
-//        self.performSegue(withIdentifier: "welcomeCustomer", sender: nil)
-//kdjfhliszufgho
-        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -132,6 +118,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             let vc = navc.viewControllers.first as! welcomeCustomerViewController
             
             vc.qrCode = codeFinal
+            print(codeFinal)
             
         }
  
