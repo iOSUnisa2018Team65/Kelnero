@@ -68,7 +68,7 @@ class GenerateQrViewController: UIViewController {
                             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                             self.present(alert, animated: true)
                         }
-                    } else {
+                    } else { // SUCCESS
                         print("In Generating QR: received iCloudId \(userId)")
                         let qrString = userId + "_" + n
                         print("In Generating QR: generating \(qrString)")
@@ -91,13 +91,18 @@ class GenerateQrViewController: UIViewController {
     }
     
     func shareQrImage() {
-        let image = imageView.image
+        let alert = UIAlertController(title: "TO DO", message: "Implementare salvataggio immagine in galleria", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
+        
+        /*let image = imageView.image
         // set up activity view controller
         let imageToShare = [ image! ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         // present the view controller
         self.present(activityViewController, animated: true, completion: nil)
+        */
     }
     
     

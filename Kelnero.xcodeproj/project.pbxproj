@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		7B29ED5B20F8E91A00B53F65 /* QrCodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29ED5A20F8E91A00B53F65 /* QrCodeUtils.swift */; };
 		7B29ED5D20F8E9AD00B53F65 /* IcloudUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29ED5C20F8E9AD00B53F65 /* IcloudUtils.swift */; };
+		7B3228A820FC889E000868D6 /* OrderRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3228A720FC889E000868D6 /* OrderRowModel.swift */; };
+		7B3228AA20FC897D000868D6 /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3228A920FC897D000868D6 /* OrderRow.swift */; };
+		7B3228AC20FC89A2000868D6 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3228AB20FC89A2000868D6 /* Restaurant.swift */; };
+		7B3228AE20FC89B0000868D6 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3228AD20FC89B0000868D6 /* Dish.swift */; };
+		7B3228B020FC89C1000868D6 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3228AF20FC89C1000868D6 /* DishModel.swift */; };
+		7B3228B220FC89D2000868D6 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3228B120FC89D2000868D6 /* RestaurantModel.swift */; };
 		7BE10AA720F8FD3800E0239D /* GenerateQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE10AA620F8FD3800E0239D /* GenerateQrViewController.swift */; };
 		7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935320F79A58009F41B7 /* AppDelegate.swift */; };
 		7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
@@ -22,6 +28,12 @@
 /* Begin PBXFileReference section */
 		7B29ED5A20F8E91A00B53F65 /* QrCodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QrCodeUtils.swift; path = Utils/QrCodeUtils.swift; sourceTree = "<group>"; };
 		7B29ED5C20F8E9AD00B53F65 /* IcloudUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IcloudUtils.swift; path = Utils/IcloudUtils.swift; sourceTree = "<group>"; };
+		7B3228A720FC889E000868D6 /* OrderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderRowModel.swift; path = Model/OrderRowModel.swift; sourceTree = "<group>"; };
+		7B3228A920FC897D000868D6 /* OrderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
+		7B3228AB20FC89A2000868D6 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		7B3228AD20FC89B0000868D6 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		7B3228AF20FC89C1000868D6 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DishModel.swift; path = Model/DishModel.swift; sourceTree = "<group>"; };
+		7B3228B120FC89D2000868D6 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestaurantModel.swift; path = Model/RestaurantModel.swift; sourceTree = "<group>"; };
 		7BE10AA620F8FD3800E0239D /* GenerateQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQrViewController.swift; sourceTree = "<group>"; };
 		7BEA935020F79A58009F41B7 /* Kelnero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelnero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEA935320F79A58009F41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +90,12 @@
 				7B29ED5A20F8E91A00B53F65 /* QrCodeUtils.swift */,
 				7B29ED5C20F8E9AD00B53F65 /* IcloudUtils.swift */,
 				7BE10AA620F8FD3800E0239D /* GenerateQrViewController.swift */,
+				7B3228A720FC889E000868D6 /* OrderRowModel.swift */,
+				7B3228A920FC897D000868D6 /* OrderRow.swift */,
+				7B3228AB20FC89A2000868D6 /* Restaurant.swift */,
+				7B3228AD20FC89B0000868D6 /* Dish.swift */,
+				7B3228AF20FC89C1000868D6 /* DishModel.swift */,
+				7B3228B120FC89D2000868D6 /* RestaurantModel.swift */,
 			);
 			path = Kelnero;
 			sourceTree = "<group>";
@@ -170,11 +188,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
+				7B3228AE20FC89B0000868D6 /* Dish.swift in Sources */,
 				7BE10AA720F8FD3800E0239D /* GenerateQrViewController.swift in Sources */,
 				7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */,
 				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
+				7B3228A820FC889E000868D6 /* OrderRowModel.swift in Sources */,
+				7B3228AA20FC897D000868D6 /* OrderRow.swift in Sources */,
 				7B29ED5B20F8E91A00B53F65 /* QrCodeUtils.swift in Sources */,
 				7B29ED5D20F8E9AD00B53F65 /* IcloudUtils.swift in Sources */,
+				7B3228B020FC89C1000868D6 /* DishModel.swift in Sources */,
+				7B3228B220FC89D2000868D6 /* RestaurantModel.swift in Sources */,
+				7B3228AC20FC89A2000868D6 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
