@@ -37,6 +37,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="toolBar" destination="e8h-7F-Vkx" id="3gh-0K-cUn"/>
+                        <outlet property="topBar" destination="nfg-Uh-QKW" id="nO4-vE-U4z"/>
                         <segue destination="J1s-ji-Ehe" kind="presentation" identifier="welcomeCustomer" id="aKx-YL-yE4"/>
                     </connections>
                 </viewController>
