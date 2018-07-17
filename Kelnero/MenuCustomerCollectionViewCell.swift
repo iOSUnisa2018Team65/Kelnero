@@ -15,23 +15,11 @@ class MenuCustomerCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//            let textLabel = UILabel(frame: .zero)
-//            textLabel.translatesAutoresizingMaskIntoConstraints = false
-//            self.contentView.addSubview(textLabel)
-//            NSLayoutConstraint.activate([
-//                textLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-//                textLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-//                textLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-//                textLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-//                ])
+        self.contentView.backgroundColor = UIColor.darkGray
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 8
         
-//            self.textLabel = textLabel
-        
-        self.contentView.backgroundColor = .lightGray
-        self.contentView.layer.cornerRadius = 6
-        self.contentView.layer.masksToBounds = true
-        self.textLabel.textAlignment = .center
-
         
 }
     

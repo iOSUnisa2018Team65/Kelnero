@@ -16,7 +16,6 @@
 		33F3EB0D20FCC5B70005186C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0B20FCC5B70005186C /* Restaurant.swift */; };
 		33F3EB0E20FCC5B70005186C /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0C20FCC5B70005186C /* OrderRow.swift */; };
 		33F3EB1020FCCDD70005186C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0F20FCCDD70005186C /* MenuCustomerCollectionViewCell.swift */; };
-		33F3EB1420FCDD1C0005186C /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB1320FCDD1C0005186C /* CollectionLayout.swift */; };
 		7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935320F79A58009F41B7 /* AppDelegate.swift */; };
 		7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
 		7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935720F79A58009F41B7 /* Main.storyboard */; };
@@ -36,7 +35,6 @@
 		33F3EB0B20FCC5B70005186C /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		33F3EB0C20FCC5B70005186C /* OrderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
 		33F3EB0F20FCCDD70005186C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
-		33F3EB1320FCDD1C0005186C /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
 		7BEA935020F79A58009F41B7 /* Kelnero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelnero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEA935320F79A58009F41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEA935520F79A58009F41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				33F3EB0520FC9F440005186C /* MyTabBar.swift */,
 				33F3EB0720FCC52F0005186C /* MenuCustomerCollectionViewController.swift */,
 				33F3EB0F20FCCDD70005186C /* MenuCustomerCollectionViewCell.swift */,
-				33F3EB1320FCDD1C0005186C /* CollectionLayout.swift */,
 			);
 			path = Kelnero;
 			sourceTree = "<group>";
@@ -195,7 +192,6 @@
 				33F3EB0D20FCC5B70005186C /* Restaurant.swift in Sources */,
 				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
 				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
-				33F3EB1420FCDD1C0005186C /* CollectionLayout.swift in Sources */,
 				33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */,
 				33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */,
 				7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */,

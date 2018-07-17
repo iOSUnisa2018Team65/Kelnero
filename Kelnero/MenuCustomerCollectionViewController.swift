@@ -35,12 +35,11 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         primiPiatti.append(pizza)
         
         desserts.append(tiramisu)
-         
-        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 10, bottom: 10, right: 10)
-
-        if let layout = collectionView?.collectionViewLayout as? CollectionLayout {
-            layout.delegate = self as! CollectionLayoutDelegate
-        }
+        
+        
+//        if let layout = collectionView?.collectionViewLayout as? CollectionLayout {
+//            layout.delegate = self as! CollectionLayoutDelegate
+//        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -98,15 +97,22 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-//        if let flowLayout = self.collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-//            flowLayout.itemSize = CGSize(width: (self.collectionView?.bounds.width)!, height: 120)
-//        }
-        
+    // change background color when user touches cell
+    override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.red
     }
-
+    
+    // change background color back when user releases touch
+    override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.darkGray
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: CGFloat((collectionView.frame.size.width / 3) - 20), height: CGFloat(100))
+    }
+    
     // MARK: UICollectionViewDelegate
 
     /*
