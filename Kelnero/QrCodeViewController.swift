@@ -25,9 +25,9 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()   // Cattura in real-time
         
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)  //Impone l'apertura solo della camera posteriore
+        let deviceDiscoverySession = AVCaptureDevice.default(for: .video) 
         
-        guard let captureDevice = deviceDiscoverySession.devices.first else
+        guard let captureDevice = deviceDiscoverySession else
         {
             print("Nessuna camera")
             return
