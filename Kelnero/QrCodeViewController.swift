@@ -18,7 +18,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     var qrCodeFrameView:UIView?
     
-    var codeFinal: String! // var to send info in segue
+    var codeFinal: String! 
     
     override func viewDidLoad() {
         super.viewDidLoad()
