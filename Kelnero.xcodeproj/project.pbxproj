@@ -16,9 +16,9 @@
 		7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
 		7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935720F79A58009F41B7 /* Main.storyboard */; };
 		7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */; };
-		7BEA935E20F79A59009F41B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935D20F79A59009F41B7 /* Assets.xcassets */; };
 		7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */; };
 		7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEA936A20F79D5A009F41B7 /* CloudKit.framework */; };
+		BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFF793D20FDEAAC00051989 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +32,11 @@
 		7BEA935520F79A58009F41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BEA935820F79A58009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kelnero.xcdatamodel; sourceTree = "<group>"; };
-		7BEA935D20F79A59009F41B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BEA936020F79A59009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BEA936220F79A59009F41B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BEA936820F79D58009F41B7 /* Kelnero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelnero.entitlements; sourceTree = "<group>"; };
 		7BEA936A20F79D5A009F41B7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BEFF793D20FDEAAC00051989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +71,11 @@
 		7BEA935220F79A58009F41B7 /* Kelnero */ = {
 			isa = PBXGroup;
 			children = (
+				BEFF793D20FDEAAC00051989 /* Assets.xcassets */,
 				7BEA936820F79D58009F41B7 /* Kelnero.entitlements */,
 				7BEA935320F79A58009F41B7 /* AppDelegate.swift */,
 				7BEA935520F79A58009F41B7 /* ViewController.swift */,
 				7BEA935720F79A58009F41B7 /* Main.storyboard */,
-				7BEA935D20F79A59009F41B7 /* Assets.xcassets */,
 				7BEA936220F79A59009F41B7 /* Info.plist */,
 				7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */,
 				33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */,
@@ -163,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */,
-				7BEA935E20F79A59009F41B7 /* Assets.xcassets in Resources */,
+				BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */,
 				7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
