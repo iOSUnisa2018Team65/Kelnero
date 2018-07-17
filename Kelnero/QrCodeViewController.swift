@@ -10,6 +10,9 @@ import UIKit
 import AVFoundation
 
 class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var topBar: UINavigationItem!
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -34,7 +37,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
-            captureSession.addInput(input)   //Codice omesso prima - collego input e captureSession
+            captureSession.addInput(input)
         } catch {
             print(error)
             return
@@ -75,6 +78,8 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             qrCodeFrameView.layer.borderWidth = 2
             view.addSubview(qrCodeFrameView)
             view.bringSubview(toFront: qrCodeFrameView)
+            
+            view.bringSubview(toFront: toolBar)
         }
         
     }
@@ -122,15 +127,18 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
         if metadataObj.type == AVMetadataObject.ObjectType.qr {
+            
+            captureSession.stopRunning()
+            
             let qrCodeObject = previewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = qrCodeObject!.bounds
-            
-            if metadataObj.stringValue != nil {
 
-                let readValue: String = metadataObj.stringValue!   //<--- da qui si può usare il valore letto
-                print(readValue)
+            let readValue: String = metadataObj.stringValue!   //<--- da qui si può usare il valore letto
                 
-            }
+            print(readValue)
+                
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            found(code: readValue)
         }
     }
     
