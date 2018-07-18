@@ -15,8 +15,15 @@ class Dish: NSObject {
     var price: Double
     var category: String
     var descr: String
-    var photo: UIImage
+    var photo: UIImage = UIImage(named:"Image")!
     
+    init(restaurant: Restaurant, name: String, price: Double, description: String) {
+        self.restaurant = restaurant
+        self.name = name
+        self.price = price
+        self.category = "category"
+        self.descr = description
+    }
     init(restaurant: Restaurant, name: String, price: Double, description: String, photo: UIImage) {
         self.restaurant = restaurant
         self.name = name

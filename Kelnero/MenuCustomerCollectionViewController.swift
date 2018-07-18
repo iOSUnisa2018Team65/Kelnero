@@ -12,10 +12,10 @@ private let reuseIdentifier = "Cell"
 
 let restaurant = Restaurant(ownerIcloudId: "_33caratteri", name: "Da Mario", address: "Via Mario Rossi")
 
-let carbonara = Dish(restaurant: restaurant, id: 3, name: "Carbonara", price: 7, description: "Carbonara bella")
-let pizza = Dish(restaurant: restaurant, id: 3, name: "Pizza", price: 5, description: "Margherita")
+let carbonara = Dish(restaurant: restaurant, name: "Carbonara", price: 7, description: "Carbonara bella")
+let pizza = Dish(restaurant: restaurant, name: "Pizza", price: 5, description: "Margherita")
 
-let tiramisu = Dish(restaurant: restaurant, id: 3, name: "Tiramisù", price: 8, description: "Tiramisù buono")
+let tiramisu = Dish(restaurant: restaurant, name: "Tiramisù", price: 8, description: "Tiramisù buono")
 
 var primiPiatti = [Dish]()
 var desserts = [Dish]()
@@ -94,6 +94,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! MenuCustomerCollectionViewCell
 
         cell.textLabel.text = "\(menu[indexPath.section][indexPath.row].name) Section: \(indexPath.section)"
+        cell.image.image = menu[indexPath.section][indexPath.row].photo
 
         return cell
     }
