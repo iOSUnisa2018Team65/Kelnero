@@ -93,7 +93,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! MenuCustomerCollectionViewCell
 
-        cell.textLabel.text = "\(menu[indexPath.section][indexPath.row].name) Section: \(indexPath.section)"
+        cell.textLabel.text = "\(menu[indexPath.section][indexPath.row].name)"
         cell.image.image = menu[indexPath.section][indexPath.row].photo
 
         return cell
@@ -111,7 +111,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         cell?.backgroundColor = UIColor.darkGray
     }
     
-   
+   //sezioni
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeaderView" , for: indexPath) as! SectionHeaderView

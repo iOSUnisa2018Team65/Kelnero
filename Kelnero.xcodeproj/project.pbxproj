@@ -75,6 +75,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3395E78C20FF556D0021410C /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */,
+				7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */,
+				7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		3395E78D20FF55900021410C /* Owner */ = {
+			isa = PBXGroup;
+			children = (
+				7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
+			);
+			path = Owner;
+			sourceTree = "<group>";
+		};
+		3395E78E20FF55BA0021410C /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				3395E78F20FF55E00021410C /* CollectionView */,
+				33F3EB0520FC9F440005186C /* MyTabBar.swift */,
+				33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */,
+				33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		3395E78F20FF55E00021410C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
+				3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
+				3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		7BEA934720F79A58009F41B7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +134,9 @@
 		7BEA935220F79A58009F41B7 /* Kelnero */ = {
 			isa = PBXGroup;
 			children = (
-				3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
-				3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
+				3395E78E20FF55BA0021410C /* Customer */,
+				3395E78D20FF55900021410C /* Owner */,
+				3395E78C20FF556D0021410C /* QR */,
 				BEFF793D20FDEAAC00051989 /* Assets.xcassets */,
 				7BEA936820F79D58009F41B7 /* Kelnero.entitlements */,
 				7BEA935320F79A58009F41B7 /* AppDelegate.swift */,
@@ -104,22 +144,14 @@
 				7BEA935720F79A58009F41B7 /* Main.storyboard */,
 				7BEA936220F79A59009F41B7 /* Info.plist */,
 				7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */,
-				33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */,
-				33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */,
 				7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */,
-				33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
-				33F3EB0520FC9F440005186C /* MyTabBar.swift */,
-				7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
 				7B41539E20FDE93C003EC57E /* IcloudUtils.swift */,
-				7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */,
 				7B4153A220FDE9E2003EC57E /* Dish.swift */,
 				7B4153A420FDEA03003EC57E /* Restaurant.swift */,
 				7B4153A620FDEA20003EC57E /* OrderRow.swift */,
 				7B4153A820FDEA4B003EC57E /* DishModel.swift */,
 				7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */,
 				7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */,
-				7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */,
-				3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
 			);
 			path = Kelnero;
 			sourceTree = "<group>";
