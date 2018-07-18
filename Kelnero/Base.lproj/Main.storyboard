@@ -107,49 +107,6 @@
             </objects>
             <point key="canvasLocation" x="5368.8000000000002" y="-1442.4287856071965"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="lmc-nM-SiY">
-            <objects>
-                <viewController id="qY2-CC-uQR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HtE-eQ-EIY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88e-uC-2Iu">
-                                <rect key="frame" x="16" y="110" width="48" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dish name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Hr-ju-Ost">
-                                <rect key="frame" x="110" y="108" width="249" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DYL-kg-DU5">
-                                <rect key="frame" x="110" y="158" width="249" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Da mettere nel willApper per cambiare il bordo:                      UIColor *borderColor = [UIColor colorWithRed:204.0/255.0 green:204.0/255.0 blue:204.0/255.0 alpha:1.0];
-
-myTextView.layer.borderColor = borderColor.CGColor;
-myTextView.layer.borderWidth = 1.0;
-myTextView.layer.cornerRadius = 5.0; </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bmK-I5-5jy"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hw3-YC-ju5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6189.6000000000004" y="-1442.4287856071965"/>
-        </scene>
         <!--Settings Owner Nav Controller-->
         <scene sceneID="CAN-GL-alW">
             <objects>
@@ -276,7 +233,7 @@ myTextView.layer.cornerRadius = 5.0; </string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3213.5999999999999" y="-2272.7136431784111"/>
+            <point key="canvasLocation" x="6266" y="-1442"/>
         </scene>
         <!--Menu Owner Nav Controller-->
         <scene sceneID="6y4-fc-PL6">
