@@ -14,13 +14,13 @@ class MyTabBar: UITabBarController {
         super.viewDidLoad()
         
         self.tabBar.items?[0].image = UIImage(named: "home")?.withRenderingMode(.alwaysOriginal)
-        self.tabBar.items?[0].selectedImage = UIImage(named: "home")?.withRenderingMode(.alwaysOriginal)
+        self.tabBar.items?[0].selectedImage = UIImage(named: "homeSelected")?.withRenderingMode(.alwaysOriginal)
         
         self.tabBar.items?[1].image = UIImage(named: "menu")?.withRenderingMode(.alwaysOriginal)
-        self.tabBar.items?[1].selectedImage = UIImage(named: "menu")?.withRenderingMode(.alwaysOriginal)
+        self.tabBar.items?[1].selectedImage = UIImage(named: "menuSelected")?.withRenderingMode(.alwaysOriginal)
         
         self.tabBar.items?[2].image = UIImage(named: "order")?.withRenderingMode(.alwaysOriginal)
-        self.tabBar.items?[2].selectedImage = UIImage(named: "order")?.withRenderingMode(.alwaysOriginal)
+        self.tabBar.items?[2].selectedImage = UIImage(named: "orderSelected")?.withRenderingMode(.alwaysOriginal)
   // Do any additional setup after loading the view.
     }
 
