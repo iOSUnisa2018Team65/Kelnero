@@ -83,7 +83,7 @@ class OrderRowModel: NSObject {
                                 else {
                                     var order = OrderRow(restaurant: rest!, table: table, dish: d!, quantity: quantity, state: state)
                                     orders.append(order)
-                                    print("ok")
+                                    print("Retrieved order for dish \(order.dish.name) in table \(order.table)")
                                 }
                             }
                         }
