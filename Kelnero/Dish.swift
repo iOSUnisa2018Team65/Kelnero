@@ -13,6 +13,7 @@ class Dish: NSObject {
     var restaurant: Restaurant
     var name: String
     var price: Double
+    var category: String
     var descr: String
     var photo: UIImage
     
@@ -20,6 +21,16 @@ class Dish: NSObject {
         self.restaurant = restaurant
         self.name = name
         self.price = price
+        self.category = "category"
+        self.descr = description
+        self.photo = photo
+    }
+    
+    init(restaurant: Restaurant, name: String, price: Double, category: String, description: String, photo: UIImage) {
+        self.restaurant = restaurant
+        self.name = name
+        self.price = price
+        self.category = category
         self.descr = description
         self.photo = photo
     }
