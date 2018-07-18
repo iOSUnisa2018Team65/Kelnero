@@ -24,6 +24,7 @@ class Dish: NSObject {
         self.category = "category"
         self.descr = description
     }
+    
     init(restaurant: Restaurant, name: String, price: Double, description: String, photo: UIImage) {
         self.restaurant = restaurant
         self.name = name

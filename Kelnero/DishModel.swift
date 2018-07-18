@@ -16,6 +16,7 @@ class DishModel: NSObject {
     static let restaurantIdField = "restaurant_Id"
     static let nameField = "name"
     static let priceField = "price"
+    static let categoryField = "category"
     static let descriptionField = "descr"
     static let photoField = "image"
     
@@ -28,6 +29,7 @@ class DishModel: NSObject {
         record[restaurantIdField] = dishToAdd.restaurant.id as NSString
         record[nameField] = dishToAdd.name as NSString
         record[priceField] = dishToAdd.price as NSNumber
+        record[categoryField] = dishToAdd.category as NSString
         record[descriptionField] = dishToAdd.descr as NSString
         
         // image will have same name as dish
@@ -130,43 +132,54 @@ class DishModel: NSObject {
     }
     
     
-    class func getAllDishesByRestaurantId(restaurantId restId: String, completionHandler handler: @escaping ([Dish], Error?) -> (Void)) {
-        var dishesList = [Dish]()
-        let whereClause = NSPredicate(format: "%K == %@", restaurantIdField, restId)
-        let query = CKQuery(recordType: recordType, predicate: whereClause)
-        let queryOperation = CKQueryOperation(query: query)
+    class func getAllDishesByRestaurantId(restaurantId restId: String, completionHandler handler: @escaping ([[Dish]], Error?) -> (Void)) {
+        var menu = [[Dish]]()
+        var categories = [String]()
+        var whereClause = NSPredicate(format: "%K == %@", restaurantIdField, restId)
+        var query = CKQuery(recordType: recordType, predicate: whereClause)
+        var queryOperation = CKQueryOperation(query: query)
         
         queryOperation.recordFetchedBlock = { fetchedRecord in
-            let restaurantId = fetchedRecord[restaurantIdField] as! String
+            var restaurantId = fetchedRecord[restaurantIdField] as! String
             var rest: Restaurant? = nil
             RestaurantModel.getById(idToSearch: restaurantId) {
                 (r, error) in
                 if let e = error {
-                    handler(dishesList, e)
+                    handler(menu, e)
                     return
                 }
                 else {
                     rest = r
-                    let name = fetchedRecord[nameField] as! String
-                    let price = fetchedRecord[priceField] as! Double
-                    let descr = fetchedRecord[descriptionField] as! String
-                    let asset = fetchedRecord[photoField] as! CKAsset
-                    let assetUrl = asset.fileURL
-                    let img = NSData(contentsOf: assetUrl)
-                    let photo = UIImage(data: img as! Data)!
-                    let d = Dish(restaurant: rest!, name: name, price: price, description: descr, photo: photo)
-                    dishesList.append(d)
-                    print("retrieved dish \(d.name)")
+                    var name = fetchedRecord[nameField] as! String
+                    var price = fetchedRecord[priceField] as! Double
+                    var category = fetchedRecord[categoryField] as! String
+                    var descr = fetchedRecord[descriptionField] as! String
+                    var asset = fetchedRecord[photoField] as! CKAsset
+                    var assetUrl = asset.fileURL
+                    var img = NSData(contentsOf: assetUrl)
+                    var photo = UIImage(data: img as! Data)!
+                    var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo)
+                    if categories.contains(category) {
+                        var i = categories.index(of: category)!
+                        menu[i].append(d)
+                    }
+                    else {
+                        categories.append(category)
+                        menu.append([Dish]())
+                        var i = categories.index(of: category)!
+                        menu[i].append(d)
+                    }
+                    print("retrieved dish \(d.name) in category \(d.category)")
                 }
             }
         }
         
         queryOperation.queryCompletionBlock = { (cursor, error) in
             if let e = error {
-                handler(dishesList, e)
+                handler(menu, e)
             }
             else {
-                handler(dishesList, nil)
+                handler(menu, nil)
             }
         }
         
