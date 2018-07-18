@@ -31,6 +31,8 @@
 		7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */; };
 		7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEA936A20F79D5A009F41B7 /* CloudKit.framework */; };
 		BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFF793D20FDEAAC00051989 /* Assets.xcassets */; };
+		FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */; };
+		FA25B38320FF683100CC6730 /* OrdersCustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25B38220FF683100CC6730 /* OrdersCustomerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		7BEA936820F79D58009F41B7 /* Kelnero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelnero.entitlements; sourceTree = "<group>"; };
 		7BEA936A20F79D5A009F41B7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BEFF793D20FDEAAC00051989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewController.swift; sourceTree = "<group>"; };
+		FA25B38220FF683100CC6730 /* OrdersCustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				33F3EB0520FC9F440005186C /* MyTabBar.swift */,
 				33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */,
 				33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
+				FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 				3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
 				3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
 				3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
+				FA25B38220FF683100CC6730 /* OrdersCustomerTableViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
 				7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */,
 				7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */,
+				FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */,
 				3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
 				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
 				3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */,
@@ -260,6 +267,7 @@
 				7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */,
 				7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */,
 				33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */,
+				FA25B38320FF683100CC6730 /* OrdersCustomerTableViewCell.swift in Sources */,
 				3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */,
 				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
 				7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */,
