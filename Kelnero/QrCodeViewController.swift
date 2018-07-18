@@ -11,8 +11,7 @@ import AVFoundation
 
 class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet weak var ownerSide: UIButton!
-    
+    @IBOutlet weak var toolBar: UIToolbar!
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -78,9 +77,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             qrCodeFrameView.layer.borderWidth = 2
             view.addSubview(qrCodeFrameView)
             view.bringSubview(toFront: qrCodeFrameView)
-            ownerSide.layer.cornerRadius = 10
-            view.bringSubview(toFront: ownerSide)
-        
+            view.bringSubview(toFront: toolBar)
         }
         
     }
