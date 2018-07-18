@@ -342,9 +342,9 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="D5f-n2-hNd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="XGt-Tu-yKH">
+                    <navigationItem key="navigationItem" title="Welcome" largeTitleDisplayMode="never" id="XGt-Tu-yKH">
                         <barButtonItem key="rightBarButtonItem" title="Back to qr" id="R56-Kz-eup">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backToQr:" destination="ax7-EH-5Cb" id="Oqk-QY-5po"/>
                                 <segue destination="xiO-Di-sYf" kind="presentation" identifier="backToQr" id="eBl-1U-4EK"/>
@@ -452,7 +452,7 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fyw-9w-I2O"/>
                     </view>
                 </viewController>
@@ -591,7 +591,7 @@ myTextView.layer.cornerRadius = 5.0; </string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Qo-HM-HDG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
