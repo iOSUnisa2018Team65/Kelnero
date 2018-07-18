@@ -17,7 +17,7 @@ class DishModel: NSObject {
     static let nameField = "name"
     static let priceField = "price"
     static let descriptionField = "descr"
-    static let imageField = "image"
+    static let photoField = "image"
     
     
     class func addNew(dish dishToAdd: Dish, completionHandler handler: @escaping (Dish, Error?) -> Void) {
@@ -44,7 +44,7 @@ class DishModel: NSObject {
             NSLog("Unable to write file: \(error)")
         }
         let asset = CKAsset(fileURL: targetURL)
-        record[imageField] = asset
+        record[photoField] = asset
         
         // saving
         let container = CKContainer.default()
@@ -128,4 +128,52 @@ class DishModel: NSObject {
         } */
         
     }
+    
+    
+    class func getAllDishesByRestaurantId(restaurantId restId: String, completionHandler handler: @escaping ([Dish], Error?) -> (Void)) {
+        var dishesList = [Dish]()
+        let whereClause = NSPredicate(format: "%K == %@", restaurantIdField, restId)
+        let query = CKQuery(recordType: recordType, predicate: whereClause)
+        let queryOperation = CKQueryOperation(query: query)
+        
+        queryOperation.recordFetchedBlock = { fetchedRecord in
+            let restaurantId = fetchedRecord[restaurantIdField] as! String
+            var rest: Restaurant? = nil
+            RestaurantModel.getById(idToSearch: restaurantId) {
+                (r, error) in
+                if let e = error {
+                    handler(dishesList, e)
+                    return
+                }
+                else {
+                    rest = r
+                    let name = fetchedRecord[nameField] as! String
+                    let price = fetchedRecord[priceField] as! Double
+                    let descr = fetchedRecord[descriptionField] as! String
+                    let asset = fetchedRecord[photoField] as! CKAsset
+                    let assetUrl = asset.fileURL
+                    let img = NSData(contentsOf: assetUrl)
+                    let photo = UIImage(data: img as! Data)!
+                    let d = Dish(restaurant: rest!, name: name, price: price, description: descr, photo: photo)
+                    dishesList.append(d)
+                    print("retrieved dish \(d.name)")
+                }
+            }
+        }
+        
+        queryOperation.queryCompletionBlock = { (cursor, error) in
+            if let e = error {
+                handler(dishesList, e)
+            }
+            else {
+                handler(dishesList, nil)
+            }
+        }
+        
+        let container = CKContainer.default()
+        let db = container.publicCloudDatabase
+        
+        db.add(queryOperation)
+    }
+    
 }
