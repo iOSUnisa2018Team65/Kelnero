@@ -111,7 +111,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         cell?.backgroundColor = UIColor.darkGray
     }
     
-   
+   //sezioni
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeaderView" , for: indexPath) as! SectionHeaderView
