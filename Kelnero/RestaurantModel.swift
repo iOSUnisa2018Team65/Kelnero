@@ -20,7 +20,6 @@ class RestaurantModel: NSObject {
     
     // async saving: the caller must give a completion handler
     class func addNew(restaurant: Restaurant, completionHandler handler: @escaping (Restaurant, Error?) -> Void) {
-        print("Adding restaurant")
         let recordId = CKRecordID(recordName: restaurant.id)
         let record = CKRecord(recordType: recordType, recordID: recordId)
         record[idField] = restaurant.id as NSString
@@ -42,7 +41,6 @@ class RestaurantModel: NSObject {
     
     
     class func getById(idToSearch: String, completionHandler handler: @escaping (Restaurant?, Error?) -> (Void)) {
-        print("Fetching restaurant")
         // do not let fetchedRestaurant
         var fetchedRestaurant: Restaurant? = nil
         // we want that content in idField is equal to the passed id to search

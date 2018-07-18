@@ -10,13 +10,4 @@ import UIKit
 
 class OrderRowModel: NSObject {
 
-    // table and fields names
-    static let recordType = "OrderRow"
-    static let restaurantIdField = "restaurant_Id"
-    static let tableField = "table"
-    static let plateField = "plate_name"
-    static let quantityField = "quantity"
-    static let stateField = "state"
-    
-    
 }
