@@ -9,10 +9,11 @@
 import UIKit
 
 class AddDishOwnerViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var descriptionField: UITextView!
     
     var image: UIImage!
@@ -20,13 +21,14 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         nameField.endEditing(true)
         priceField.endEditing(true)
+        categoryField.endEditing(true)
         descriptionField.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
@@ -53,7 +55,7 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
         present(imagePicker, animated: true, completion: nil)
     }
     
-
+    
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String: Any]) {
         // Get picked image from info dictionary
@@ -68,6 +70,7 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         let name = nameField.text
         let price = (priceField.text as! NSString).doubleValue
+        let category = categoryField.text
         let description = descriptionField.text
         let image = self.image
         RestaurantModel.getById(idToSearch: ownerId) {
@@ -77,7 +80,7 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                 return
             }
             else {
-                let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, description: description!, photo: image!)
+                let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, category: category!, description: description!, photo: image!)
                 
                 DishModel.addNew(dish: newDish) {
                     (dish, error) in
@@ -91,30 +94,34 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                 }
             }
         }
-        
-        
+    }
+    
+    @IBAction func prova(_ sender: UIButton) {
         DishModel.getAllDishesByRestaurantId(restaurantId: ownerId) {
-            (list, error) in
+            (menu, error) in
             if let e = error {
                 print(e)
             }
             else {
-                print(list)
-                DispatchQueue.main.async {
-                    self.imageView.image = list.first?.photo
+                menu.forEach() {
+                    (lista) in
+                    lista.forEach() {
+                        (d) in
+                        print(d.name + d.category)
+                    }
                 }
             }
         }
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
