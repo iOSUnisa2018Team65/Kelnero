@@ -10,16 +10,21 @@ import UIKit
 
 class OrdersCustomerTableViewController: UITableViewController {
     
+    var orders = [OrderRow]()
+    let restaurant = Restaurant(ownerIcloudId: "_33caratteri", name: "Da Mario", address: "Via Mario Rossi")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ordine1 = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 3)
+        orders.append(ordine1)
+        
         
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,14 +40,16 @@ class OrdersCustomerTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath) as! OrdersCustomerTableViewCell
         
-        // Configure the cell...
+        cell.imageView?.image = orders[indexPath.row].dish.photo
+        cell.nameLabel.text = orders[indexPath.row].dish.name
+        cell.quantityLabel.text = String(orders[indexPath.row].quantity)
         
         return cell
     }

@@ -13,6 +13,7 @@ class OrdersCustomerTableViewCell: UITableViewCell {
     @IBOutlet weak var imageOrder: UIImageView!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -88,18 +88,18 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        var returnValue = Int()
-        
-        if section == 0 {
-            returnValue = primiPiatti.count
-            
-        } else if section == 1 {
-            returnValue = desserts.count
-            
-        }
-        
-        return returnValue
+        return menu[section].count
+//        var returnValue = Int()
+//
+//        if section == 0 {
+//            returnValue = primiPiatti.count
+//
+//        } else if section == 1 {
+//            returnValue = desserts.count
+//
+//        }
+//
+//        return returnValue
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
