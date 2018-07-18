@@ -94,20 +94,6 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                 }
             }
         }
-        
-        
-//        DishModel.getAllDishesByRestaurantId(restaurantId: ownerId) {
-//            (list, error) in
-//            if let e = error {
-//                print(e)
-//            }
-//            else {
-//                print(list)
-//                DispatchQueue.main.async {
-//                    self.imageView.image = list.first?.photo
-//                }
-//            }
-//        }
     }
     
     @IBAction func prova(_ sender: UIButton) {

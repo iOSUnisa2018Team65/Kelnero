@@ -137,56 +137,52 @@ class DishModel: NSObject {
         var categories = [String]()
         var whereClause = NSPredicate(format: "%K == %@", restaurantIdField, restId)
         var query = CKQuery(recordType: recordType, predicate: whereClause)
-        var queryOperation = CKQueryOperation(query: query)
-        
-        queryOperation.recordFetchedBlock = { fetchedRecord in
-            var restaurantId = fetchedRecord[restaurantIdField] as! String
-            var rest: Restaurant? = nil
-            RestaurantModel.getById(idToSearch: restaurantId) {
-                (r, error) in
-                if let e = error {
-                    handler(menu, e)
-                    return
-                }
-                else {
-                    rest = r
-                    var name = fetchedRecord[nameField] as! String
-                    var price = fetchedRecord[priceField] as! Double
-                    var category = fetchedRecord[categoryField] as! String
-                    var descr = fetchedRecord[descriptionField] as! String
-                    var asset = fetchedRecord[photoField] as! CKAsset
-                    var assetUrl = asset.fileURL
-                    var img = NSData(contentsOf: assetUrl)
-                    var photo = UIImage(data: img as! Data)!
-                    var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo)
-                    if categories.contains(category) {
-                        var i = categories.index(of: category)!
-                        menu[i].append(d)
-                    }
-                    else {
-                        categories.append(category)
-                        menu.append([Dish]())
-                        var i = categories.index(of: category)!
-                        menu[i].append(d)
-                    }
-                    print("retrieved dish \(d.name) in category \(d.category)")
-                }
-            }
-        }
-        
-        queryOperation.queryCompletionBlock = { (cursor, error) in
+        var rest: Restaurant? = nil
+        RestaurantModel.getById(idToSearch: restId) {
+            (r, error) in
             if let e = error {
                 handler(menu, e)
+                return
             }
             else {
-                handler(menu, nil)
+                rest = r!
+            
+                let container = CKContainer.default()
+                let db = container.publicCloudDatabase
+                
+                db.perform(query, inZoneWith: nil) {
+                    (records, error) in
+                    if let e = error {
+                        handler(menu, e)
+                    }
+                    else {
+                        records?.forEach() { fetchedRecord in
+                                var name = fetchedRecord[nameField] as! String
+                                var price = fetchedRecord[priceField] as! Double
+                                var category = fetchedRecord[categoryField] as! String
+                                var descr = fetchedRecord[descriptionField] as! String
+                                var asset = fetchedRecord[photoField] as! CKAsset
+                                var assetUrl = asset.fileURL
+                                var img = NSData(contentsOf: assetUrl)
+                                var photo = UIImage(data: img as! Data)!
+                            var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo)
+                                if categories.contains(category) {
+                                    var i = categories.index(of: category)!
+                                    menu[i].append(d)
+                                }
+                                else {
+                                    categories.append(category)
+                                    menu.append([Dish]())
+                                    var i = categories.index(of: category)!
+                                    menu[i].append(d)
+                                }
+                                print("Retrieved dish \(d.name) in category \(d.category)")
+                            }
+                        handler(menu, nil)
+                    }
+                }
             }
         }
-        
-        let container = CKContainer.default()
-        let db = container.publicCloudDatabase
-        
-        db.add(queryOperation)
     }
     
 }

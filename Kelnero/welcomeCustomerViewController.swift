@@ -27,12 +27,11 @@ class welcomeCustomerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if qrCode == "" {
-            myLabel.text = "No qrcode"
+            restaurantNameLabel.text = "No qrcode"
         }else{
-            var str = qrCode
-        
             spinner.startAnimating()
-            var str = "46da4a3ab2106811eecd8e73ea204468_2"
+            var str = qrCode
+            //var str = "46da4a3ab2106811eecd8e73ea204468_2" used in debug when no qr code available
             var restaurantKey = String(str.split(separator: "_")[0])
             var tableNumber = String(str.split(separator: "_")[1])
             RestaurantModel.getById(idToSearch: restaurantKey) {
