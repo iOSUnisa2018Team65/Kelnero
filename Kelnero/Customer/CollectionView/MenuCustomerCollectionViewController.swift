@@ -39,18 +39,16 @@ var menu = [[Dish]]()
 
 class MenuCustomerCollectionViewController: UICollectionViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        primiPiatti.append(carbonara)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza) //pizza is good
-
+        activityIndicator.hidesWhenStopped = true
         
-        desserts.append(tiramisu)
+        if menu.isEmpty {
+            activityIndicator.startAnimating()
+        }
         
         DishModel.getAllDishesByRestaurantId(restaurantId: "46da4a3ab2106811eecd8e73ea204468") {
             (menu2, error) in
@@ -59,19 +57,13 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
             }
             else {
                 menu = menu2
+                DispatchQueue.main.async { //reloads when menu is fetched
+                    self.collectionView?.reloadData()
+                    self.activityIndicator.stopAnimating()
+                }
             }
         }
 
-        
-        DishModel.getAllDishesByRestaurantId(restaurantId: "46da4a3ab2106811eecd8e73ea204468") {
-            (menu2, error) in
-            if let e = error {
-                print(e)
-            }
-            else {
-                menu = menu2
-            }
-        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
