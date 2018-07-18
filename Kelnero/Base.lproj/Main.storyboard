@@ -418,4 +418,5 @@
         <image name="menu" width="20" height="20"/>
         <image name="order" width="20" height="20"/>
     </resources>
+    <color key="tintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
