@@ -7,34 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
+		3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
 		33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */; };
 		33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */; };
 		33F3EB0220F8E2B70005186C /* menuCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0120F8E2B70005186C /* menuCustomerViewController.swift */; };
+		33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */; };
 		33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0520FC9F440005186C /* MyTabBar.swift */; };
+		7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */; };
+		7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539E20FDE93C003EC57E /* IcloudUtils.swift */; };
+		7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */; };
+		7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A220FDE9E2003EC57E /* Dish.swift */; };
+		7B4153A520FDEA03003EC57E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A420FDEA03003EC57E /* Restaurant.swift */; };
+		7B4153A720FDEA20003EC57E /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A620FDEA20003EC57E /* OrderRow.swift */; };
+		7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A820FDEA4B003EC57E /* DishModel.swift */; };
+		7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */; };
+		7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */; };
+		7B4153AF20FDEA7E003EC57E /* GenerateQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */; };
 		7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935320F79A58009F41B7 /* AppDelegate.swift */; };
 		7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
 		7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935720F79A58009F41B7 /* Main.storyboard */; };
 		7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */; };
-		7BEA935E20F79A59009F41B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935D20F79A59009F41B7 /* Assets.xcassets */; };
 		7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */; };
 		7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEA936A20F79D5A009F41B7 /* CloudKit.framework */; };
 		FA9827EF20FF1B5C0067AA8F /* OrdersOwnerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9827EE20FF1B5C0067AA8F /* OrdersOwnerTableViewController.swift */; };
 		FA9827F120FF32700067AA8F /* OrdersCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9827F020FF32700067AA8F /* OrdersCustomerTableViewController.swift */; };
 		FA9827F320FF32FB0067AA8F /* Ordine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9827F220FF32FB0067AA8F /* Ordine.swift */; };
 		FA9827F520FF377E0067AA8F /* OrdersCustomerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9827F420FF377E0067AA8F /* OrdersCustomerCell.swift */; };
+		BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFF793D20FDEAAC00051989 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
+		3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
 		33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
 		33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCustomerViewController.swift; sourceTree = "<group>"; };
 		33F3EB0120F8E2B70005186C /* menuCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuCustomerViewController.swift; sourceTree = "<group>"; };
+		33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCustomerViewController.swift; sourceTree = "<group>"; };
 		33F3EB0520FC9F440005186C /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishOwnerViewController.swift; sourceTree = "<group>"; };
+		7B41539E20FDE93C003EC57E /* IcloudUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcloudUtils.swift; sourceTree = "<group>"; };
+		7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeUtils.swift; sourceTree = "<group>"; };
+		7B4153A220FDE9E2003EC57E /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		7B4153A420FDEA03003EC57E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		7B4153A620FDEA20003EC57E /* OrderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
+		7B4153A820FDEA4B003EC57E /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
+		7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowModel.swift; sourceTree = "<group>"; };
+		7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQrViewController.swift; sourceTree = "<group>"; };
 		7BEA935020F79A58009F41B7 /* Kelnero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelnero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BEA935320F79A58009F41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BEA935520F79A58009F41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BEA935820F79A58009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kelnero.xcdatamodel; sourceTree = "<group>"; };
-		7BEA935D20F79A59009F41B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BEA936020F79A59009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BEA936220F79A59009F41B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BEA936820F79D58009F41B7 /* Kelnero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelnero.entitlements; sourceTree = "<group>"; };
@@ -43,6 +68,7 @@
 		FA9827F020FF32700067AA8F /* OrdersCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewController.swift; sourceTree = "<group>"; };
 		FA9827F220FF32FB0067AA8F /* Ordine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ordine.swift; sourceTree = "<group>"; };
 		FA9827F420FF377E0067AA8F /* OrdersCustomerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerCell.swift; sourceTree = "<group>"; };
+		BEFF793D20FDEAAC00051989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +103,9 @@
 		7BEA935220F79A58009F41B7 /* Kelnero */ = {
 			isa = PBXGroup;
 			children = (
+				3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
+				3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
+				BEFF793D20FDEAAC00051989 /* Assets.xcassets */,
 				7BEA936820F79D58009F41B7 /* Kelnero.entitlements */,
 				7BEA935320F79A58009F41B7 /* AppDelegate.swift */,
 				7BEA935520F79A58009F41B7 /* ViewController.swift */,
@@ -92,7 +121,18 @@
 				33F3EB0120F8E2B70005186C /* menuCustomerViewController.swift */,
 				FA9827F020FF32700067AA8F /* OrdersCustomerTableViewController.swift */,
 				FA9827F220FF32FB0067AA8F /* Ordine.swift */,
+				33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
 				33F3EB0520FC9F440005186C /* MyTabBar.swift */,
+				7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
+				7B41539E20FDE93C003EC57E /* IcloudUtils.swift */,
+				7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */,
+				7B4153A220FDE9E2003EC57E /* Dish.swift */,
+				7B4153A420FDEA03003EC57E /* Restaurant.swift */,
+				7B4153A620FDEA20003EC57E /* OrderRow.swift */,
+				7B4153A820FDEA4B003EC57E /* DishModel.swift */,
+				7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */,
+				7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */,
+				7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */,
 			);
 			path = Kelnero;
 			sourceTree = "<group>";
@@ -172,7 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */,
-				7BEA935E20F79A59009F41B7 /* Assets.xcassets in Resources */,
+				BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */,
 				7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,14 +227,28 @@
 				33F3EB0220F8E2B70005186C /* menuCustomerViewController.swift in Sources */,
 				FA9827EF20FF1B5C0067AA8F /* OrdersOwnerTableViewController.swift in Sources */,
 				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
+				7B4153AF20FDEA7E003EC57E /* GenerateQrViewController.swift in Sources */,
+				7B4153A520FDEA03003EC57E /* Restaurant.swift in Sources */,
+				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
+				7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */,
+				7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */,
+				3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
+				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
+				7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */,
 				33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */,
+				7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */,
 				33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */,
 				FA9827F120FF32700067AA8F /* OrdersCustomerTableViewController.swift in Sources */,
 				FA9827F320FF32FB0067AA8F /* Ordine.swift in Sources */,
 				7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */,
 				FA9827F520FF377E0067AA8F /* OrdersCustomerCell.swift in Sources */,
+				7B4153A720FDEA20003EC57E /* OrderRow.swift in Sources */,
+				7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */,
+				7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */,
 				33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */,
+				3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */,
 				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
+				7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
