@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
 		3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
-		3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */; };
 		33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */; };
 		33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */; };
 		33F3EB0220F8E2B70005186C /* menuCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0120F8E2B70005186C /* menuCustomerViewController.swift */; };
@@ -41,7 +40,6 @@
 /* Begin PBXFileReference section */
 		3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
 		3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
-		3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
 		33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCustomerViewController.swift; sourceTree = "<group>"; };
 		33F3EB0120F8E2B70005186C /* menuCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuCustomerViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */,
 				7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */,
 				7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */,
-				3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
 			);
 			path = Kelnero;
 			sourceTree = "<group>";
@@ -237,7 +234,6 @@
 				7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */,
 				3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
 				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
-				3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */,
 				7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */,
 				33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */,
 				7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */,
