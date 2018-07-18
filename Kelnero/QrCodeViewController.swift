@@ -78,7 +78,6 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             view.addSubview(qrCodeFrameView)
             view.bringSubview(toFront: qrCodeFrameView)
             view.bringSubview(toFront: toolBar)
-            
         }
         
     }
@@ -134,7 +133,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
             let readValue: String = metadataObj.stringValue!   //<--- da qui si può usare il valore letto
                 
-            print(readValue)
+            //print(readValue)
                 
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: readValue)

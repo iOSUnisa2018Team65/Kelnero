@@ -33,13 +33,14 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         
         primiPiatti.append(carbonara)
         primiPiatti.append(pizza)
+        primiPiatti.append(pizza)
+        primiPiatti.append(pizza)
+        primiPiatti.append(pizza)
+        primiPiatti.append(pizza) //pizza is good
+
         
         desserts.append(tiramisu)
-        
-        
-//        if let layout = collectionView?.collectionViewLayout as? CollectionLayout {
-//            layout.delegate = self as! CollectionLayoutDelegate
-//        }
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
