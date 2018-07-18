@@ -36,10 +36,13 @@ class GenerateQrViewController: UIViewController {
     }
     
     @IBAction func generateQRButtonClicked(_ sender: UIButton) {
-        generateQr()
+        tableNumberInputField.endEditing(true)
+        imageView.image = nil
         spinner.startAnimating()
+        generateQr()
     }
     
+    //NON COLLEGARE OUTLET: funzione di salvataggio non funziona 
     @IBAction func imageViewClicked(_ sender: UITapGestureRecognizer) {
         if imageView.image != nil {
             shareQrImage()
@@ -47,7 +50,6 @@ class GenerateQrViewController: UIViewController {
     }
     
     func generateQr() {
-        tableNumberInputField.endEditing(true)
         let n = tableNumberInputField.text!
         if n != "" {
             print("Generating Qr")
@@ -77,7 +79,7 @@ class GenerateQrViewController: UIViewController {
                         }
                     } else { // SUCCESS
                         print("In Generating QR: received iCloudId \(userId)")
-                        let qrString = userId + "_" + n
+                        let qrString = String(userId.dropFirst()) + "_" + n
                         print("In Generating QR: generating \(qrString)")
                         let qrImage = QrCodeUtils.generateQRCodeFromString(from: qrString)
                         // ui update must be done in main thread
@@ -94,6 +96,7 @@ class GenerateQrViewController: UIViewController {
             let message = NSLocalizedString("Please enter the number of the table you want to generate QR code for", comment: "GenerateQrViewController_generateQr_noTableMessage")
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            spinner.stopAnimating()
             self.present(alert, animated: true)
         }
     }

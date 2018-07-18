@@ -131,7 +131,7 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             let qrCodeObject = previewLayer?.transformedMetadataObject(for: metadataObj)
             qrCodeFrameView?.frame = qrCodeObject!.bounds
 
-            let readValue: String = metadataObj.stringValue!   //<--- da qui si può usare il valore letto
+            var readValue: String = metadataObj.stringValue!   //<--- da qui si può usare il valore letto
                 
             //print(readValue)
                 

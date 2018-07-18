@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J1s-ji-Ehe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xiO-Di-sYf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,23 +62,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Zy-KO-TGL">
-                                            <rect key="frame" x="10" y="-5" width="223.5" height="98.5"/>
+                                            <rect key="frame" x="10" y="-4.5" width="223.5" height="97.5"/>
                                             <subviews>
                                                 <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkN-L0-Efd">
-                                                    <rect key="frame" x="0.0" y="0.5" width="97" height="97.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="97.5"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-5e-ZhQ">
-                                                    <rect key="frame" x="117" y="28.5" width="106.5" height="42"/>
+                                                    <rect key="frame" x="117" y="27.5" width="106.5" height="42.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New element" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6H-qu-9q9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="21.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="106.5" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZM-10-VLz">
-                                                            <rect key="frame" x="0.0" y="21.5" width="41.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="22" width="41.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -197,6 +197,58 @@ myTextView.layer.cornerRadius = 5.0; </string>
             </objects>
             <point key="canvasLocation" x="5368.8000000000002" y="-107.49625187406298"/>
         </scene>
+        <!--Generate Qr View Controller-->
+        <scene sceneID="V9C-rc-v6j">
+            <objects>
+                <viewController id="Kx4-a7-qGJ" customClass="GenerateQrViewController" customModule="Kelnero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5H0-G6-gkT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Table number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-Bo-aUE">
+                                <rect key="frame" x="85" y="151" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enQ-e0-VOi">
+                                <rect key="frame" x="237" y="146" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA0-r5-q9d">
+                                <rect key="frame" x="143" y="231" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate QR"/>
+                                <connections>
+                                    <action selector="generateQRButtonClicked:" destination="Kx4-a7-qGJ" eventType="touchUpInside" id="yac-yR-I1Y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRg-mP-Af7">
+                                <rect key="frame" x="67" y="338" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-7L-awT">
+                                <rect key="frame" x="177" y="448" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lhj-Zn-WSb"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="YRg-mP-Af7" id="n6C-Tp-bNL"/>
+                        <outlet property="spinner" destination="CbG-7L-awT" id="art-fs-o2H"/>
+                        <outlet property="tableNumberInputField" destination="enQ-e0-VOi" id="WpG-Ka-vQ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L44-7A-QZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6493.6000000000004" y="-101.19940029985008"/>
+        </scene>
         <!--Menu Owner Nav Controller-->
         <scene sceneID="6y4-fc-PL6">
             <objects>
@@ -287,18 +339,26 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3E-cI-fAh">
-                                <rect key="frame" x="10" y="126" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ur-eE-d4D">
+                                <rect key="frame" x="16" y="180" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9v-GO-jJj">
+                                <rect key="frame" x="16" y="336" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ija-rL-B0F">
+                                <rect key="frame" x="177" y="281" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="P3E-cI-fAh" firstAttribute="leading" secondItem="D5f-n2-hNd" secondAttribute="leading" constant="10" id="SJQ-ch-XCj"/>
-                            <constraint firstItem="P3E-cI-fAh" firstAttribute="top" secondItem="D5f-n2-hNd" secondAttribute="top" constant="10" id="z2H-8Q-ISt"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="D5f-n2-hNd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="XGt-Tu-yKH">
@@ -310,7 +370,9 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="myLabel" destination="P3E-cI-fAh" id="KT5-q9-Q4Q"/>
+                        <outlet property="restaurantNameLabel" destination="1ur-eE-d4D" id="HVd-x9-cC9"/>
+                        <outlet property="spinner" destination="Ija-rL-B0F" id="aJA-Lb-4B6"/>
+                        <outlet property="tableLabel" destination="h9v-GO-jJj" id="XLB-Yc-biI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8o-li-jqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
