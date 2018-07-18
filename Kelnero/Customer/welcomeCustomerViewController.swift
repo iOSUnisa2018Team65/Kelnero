@@ -11,6 +11,8 @@ import UIKit
 class welcomeCustomerViewController: UIViewController {
     
     var qrCode: String = ""
+    var restaurantKey: String = ""
+    var tableNumber: String = ""
     
     @IBAction func backToQr(_ sender: Any) {
         DispatchQueue.main.async{
@@ -19,40 +21,68 @@ class welcomeCustomerViewController: UIViewController {
             
         }
     }
-    @IBOutlet var myLabel: UILabel!
+    
+    
+    @IBOutlet weak var restaurantNameLabel: UILabel!
+    @IBOutlet weak var tableLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewWillAppear(_ animated: Bool) {
-        if qrCode == ""{
-            myLabel.text = "No qrcode"
+        if qrCode == "" {
+            restaurantNameLabel.text = "No qrcode"
         }else{
-        myLabel.text = qrCode
+            spinner.startAnimating()
+            var str = qrCode
+            // var str = "46da4a3ab2106811eecd8e73ea204468_2" //used in debug when no qr code available
+            restaurantKey = String(str.split(separator: "_")[0])
+            tableNumber = String(str.split(separator: "_")[1])
+            RestaurantModel.getById(idToSearch: restaurantKey) {
+                (r, error) in
+                if let e = error {
+                    DispatchQueue.main.async {
+                        self.spinner.stopAnimating()
+                        self.restaurantNameLabel.text = "Couln't find info. Please retry scanning QR"
+                    }
+                }
+                else { // SUCCESS
+                    var restaurantName = r!.name
+                    DispatchQueue.main.async {
+                        self.spinner.stopAnimating()
+                        self.restaurantNameLabel.text = restaurantName
+                        self.tableLabel.text = "You're sitting at table " + self.tableNumber
+                    }
+                }
+            }
+        }
     }
-    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Welcome"
- 
-       
+        spinner.hidesWhenStopped = true
+        restaurantNameLabel.text = ""
+        tableLabel.text = ""
         
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
