@@ -18,25 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kelnero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmh-Hg-opm">
-                                <rect key="frame" x="138" y="477" width="98" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kelnero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEe-ea-Lmd">
+                                <rect key="frame" x="138.5" y="489" width="98" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-Nd-i7R">
-                                <rect key="frame" x="56" y="176" width="248" height="285"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-Nd-i7R">
+                                <rect key="frame" x="53.5" y="198" width="268" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="ChF-ZT-Vgq"/>
+                                    <constraint firstAttribute="height" constant="271" id="yk8-AJ-6a4"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pat-Nd-i7R" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AhR-iy-Xe2"/>
+                            <constraint firstItem="Pat-Nd-i7R" firstAttribute="centerX" secondItem="YEe-ea-Lmd" secondAttribute="centerX" id="Hki-BJ-L6a"/>
+                            <constraint firstItem="Pat-Nd-i7R" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iZN-rp-lug"/>
+                            <constraint firstItem="YEe-ea-Lmd" firstAttribute="top" secondItem="Pat-Nd-i7R" secondAttribute="bottom" constant="20" id="r0x-tM-uVK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.399999999999999" y="373.76311844077964"/>
         </scene>
     </scenes>
     <resources>
