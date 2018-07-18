@@ -23,5 +23,5 @@ class OrderRow: NSObject {
         self.quantity = quantity
         self.state = state
     }
-    
+
 }

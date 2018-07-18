@@ -34,5 +34,5 @@ class Dish: NSObject {
         self.descr = description
         self.photo = photo
     }
-    
+
 }
