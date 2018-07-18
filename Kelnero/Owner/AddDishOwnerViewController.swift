@@ -97,7 +97,7 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     }
     
     @IBAction func prova(_ sender: UIButton) {
-        DishModel.getAllDishesByRestaurantId(restaurantId: ownerId) {
+        /*DishModel.getAllDishesByRestaurantId(restaurantId: ownerId) {
             (menu, error) in
             if let e = error {
                 print(e)
@@ -108,6 +108,44 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                     lista.forEach() {
                         (d) in
                         print(d.name + d.category)
+                    }
+                }
+            }
+        }*/
+        RestaurantModel.getById(idToSearch: ownerId) {
+            (r, error) in
+            if let e = error {
+                print(e)
+            }
+            else {
+                var dish = Dish(restaurant: r!, name: "giulietta123456789", price: 2.5, category: "Dessert", description: "Ciao", photo: UIImage(named: "Image")!)
+                DishModel.addNew(dish: dish) {
+                    (d, error) in
+                    if let e = error {
+                        print(e)
+                    }
+                    else {
+                        var order = OrderRow(restaurant: r!, table: 2, dish: d, quantity: 2, state: 1)
+                        OrderRowModel.addNew(orderRow: order) {
+                            (o, error) in
+                                if let e = error {
+                                    print(e)
+                                }
+                                else {
+                                    OrderRowModel.getAllOrderRowsByTable(restaurantId: self.ownerId, tableNumber: 2) {
+                                        (collection, error) in
+                                        if let e = error {
+                                            print(e)
+                                        }
+                                        else {
+                                            print("WEEEEEE")
+                                            for o in collection {
+                                                print(o)
+                                            }
+                                        }
+                                    }
+                            }
+                        }
                     }
                 }
             }

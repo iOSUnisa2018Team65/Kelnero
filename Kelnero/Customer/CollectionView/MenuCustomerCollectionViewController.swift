@@ -26,6 +26,17 @@ var desserts = [Dish]()
 
 var menu = [[Dish]]()
 
+
+
+
+
+//var menu = [[Dish]]()
+//var menu = [
+//    primiPiatti,
+//    desserts
+//]
+
+
 class MenuCustomerCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
