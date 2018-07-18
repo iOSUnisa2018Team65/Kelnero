@@ -11,6 +11,7 @@ import UIKit
 class MenuCustomerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,5 +28,6 @@ class MenuCustomerCollectionViewCell: UICollectionViewCell {
         super.prepareForReuse()
         
         self.textLabel.text = nil
+        self.image.image = UIImage(named: "Image")!
     }
 }
