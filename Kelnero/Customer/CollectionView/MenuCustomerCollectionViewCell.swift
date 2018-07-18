@@ -17,9 +17,8 @@ class MenuCustomerCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         self.contentView.backgroundColor = UIColor(red: 230.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
-        self.layer.borderColor = UIColor.black.cgColor
-        self.layer.borderWidth = 0.5
-        self.layer.cornerRadius = 2
+        self.layer.cornerRadius = 3
+        
         
         
 }

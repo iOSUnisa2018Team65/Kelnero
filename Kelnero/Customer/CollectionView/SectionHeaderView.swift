@@ -16,4 +16,9 @@ class SectionHeaderView: UICollectionReusableView {
             SectionLabel.text = sectionTitle
         }
     }
+    
+    override func awakeFromNib() {
+        self.backgroundColor = .red
+        
+    }
 }
