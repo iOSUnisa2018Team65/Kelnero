@@ -392,13 +392,13 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="teJ-1a-VAa">
                             <size key="itemSize" width="164" height="162"/>
-                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCell" id="3pH-1t-qaq" customClass="MenuCustomerCollectionViewCell" customModule="Kelnero" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="164" height="162"/>
+                                <rect key="frame" x="0.0" y="0.0" width="164" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="164" height="162"/>
@@ -424,26 +424,6 @@ myTextView.layer.cornerRadius = 5.0; </string>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeaderView" id="3nw-cx-Uap" customClass="SectionHeaderView" customModule="Kelnero" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXs-Vd-xdN">
-                                    <rect key="frame" x="20" y="15" width="42" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="1" green="0.19359213778611112" blue="0.14762369791666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstItem="yXs-Vd-xdN" firstAttribute="leading" secondItem="3nw-cx-Uap" secondAttribute="leading" constant="20" id="Ngb-jp-Mo8"/>
-                                <constraint firstItem="yXs-Vd-xdN" firstAttribute="top" secondItem="3nw-cx-Uap" secondAttribute="top" constant="15" id="PDQ-IE-Akm"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="SectionLabel" destination="yXs-Vd-xdN" id="n3h-hO-V5J"/>
-                            </connections>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="6Ja-iA-pQY" id="030-Hx-Nag"/>
                             <outlet property="delegate" destination="6Ja-iA-pQY" id="Yd7-2P-noN"/>

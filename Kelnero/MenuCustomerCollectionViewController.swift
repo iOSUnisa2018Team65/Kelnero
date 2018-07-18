@@ -12,10 +12,10 @@ private let reuseIdentifier = "Cell"
 
 let restaurant = Restaurant(ownerIcloudId: "_33caratteri", name: "Da Mario", address: "Via Mario Rossi")
 
-let carbonara = Dish(restaurant: restaurant, name: "Carbonara", price: 7, description: "Carbonara bella", category: "Primi")
-let pizza = Dish(restaurant: restaurant, name: "Pizza", price: 5, description: "Margherita",category: "Primi")
+let carbonara = Dish(restaurant: restaurant, name: "Carbonara", price: 7, description: "Carbonara bella")
+let pizza = Dish(restaurant: restaurant, name: "Pizza", price: 5, description: "Margherita")
 
-let tiramisu = Dish(restaurant: restaurant, name: "Tiramisù", price: 8, description: "Tiramisù buono", category: "Desserts")
+let tiramisu = Dish(restaurant: restaurant, name: "Tiramisù", price: 8, description: "Tiramisù buono")
 
 var primiPiatti = [Dish]()
 var desserts = [Dish]()
@@ -111,16 +111,10 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         cell?.backgroundColor = UIColor.darkGray
     }
     
-   
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        
-        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeaderView" , for: indexPath) as! SectionHeaderView
-        
-        sectionHeaderView.sectionTitle = menu[indexPath.section][indexPath.row].category
-        
-        return sectionHeaderView
-        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: CGFloat((collectionView.frame.size.width / 3) - 20), height: CGFloat(100))
     }
+    
     // MARK: UICollectionViewDelegate
 
     /*
