@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */; };
 		3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
 		3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
 		3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */; };
@@ -33,10 +34,10 @@
 		7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEA936A20F79D5A009F41B7 /* CloudKit.framework */; };
 		BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFF793D20FDEAAC00051989 /* Assets.xcassets */; };
 		FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */; };
-		FA25B38320FF683100CC6730 /* OrdersCustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25B38220FF683100CC6730 /* OrdersCustomerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomerDetail.swift; sourceTree = "<group>"; };
 		3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
 		3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
 		3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		7BEA936A20F79D5A009F41B7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		BEFF793D20FDEAAC00051989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewController.swift; sourceTree = "<group>"; };
-		FA25B38220FF683100CC6730 /* OrdersCustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 				33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
 				33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */,
 				FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */,
-				FA25B38220FF683100CC6730 /* OrdersCustomerTableViewCell.swift */,
+				3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -271,8 +271,8 @@
 				3395E79120FF858B0021410C /* MyTabBarOwner.swift in Sources */,
 				7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */,
 				33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */,
-				FA25B38320FF683100CC6730 /* OrdersCustomerTableViewCell.swift in Sources */,
 				3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */,
+				3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */,
 				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
 				7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */,
 			);
