@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,14 +62,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Zy-KO-TGL">
-                                            <rect key="frame" x="10" y="-4.5" width="223.5" height="97.5"/>
+                                            <rect key="frame" x="10" y="-5" width="223.5" height="98.5"/>
                                             <subviews>
                                                 <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkN-L0-Efd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="97.5"/>
+                                                    <rect key="frame" x="0.0" y="0.5" width="97" height="97.5"/>
                                                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="b0A-5e-ZhQ">
-                                                    <rect key="frame" x="117" y="28" width="106.5" height="42"/>
+                                                    <rect key="frame" x="117" y="28.5" width="106.5" height="42"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="New element" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6H-qu-9q9">
                                                             <rect key="frame" x="0.0" y="0.0" width="106.5" height="21.5"/>
@@ -324,33 +325,34 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="teJ-1a-VAa">
-                            <size key="itemSize" width="164" height="162"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="teJ-1a-VAa">
+                            <size key="itemSize" width="177" height="175"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCell" id="3pH-1t-qaq" customClass="MenuCustomerCollectionViewCell" customModule="Kelnero" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="164" height="162"/>
+                                <rect key="frame" x="0.0" y="50" width="182" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="164" height="162"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr1-EV-ALW">
-                                            <rect key="frame" x="0.0" y="126" width="164" height="36"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr1-EV-ALW">
+                                            <rect key="frame" x="0.0" y="135" width="182" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bK-lS-Nf2">
-                                            <rect key="frame" x="0.0" y="0.0" width="164" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="136"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <size key="customSize" width="182" height="182"/>
                                 <connections>
                                     <outlet property="image" destination="4bK-lS-Nf2" id="zbR-kl-Bci"/>
                                     <outlet property="textLabel" destination="Sr1-EV-ALW" id="SMn-AU-Dd2"/>
@@ -358,6 +360,26 @@ myTextView.layer.cornerRadius = 5.0; </string>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SectionHeaderView" id="3nw-cx-Uap" customClass="SectionHeaderView" customModule="Kelnero" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXs-Vd-xdN">
+                                    <rect key="frame" x="20" y="15" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="yXs-Vd-xdN" firstAttribute="top" secondItem="3nw-cx-Uap" secondAttribute="top" constant="15" id="PDQ-IE-Akm"/>
+                                <constraint firstItem="yXs-Vd-xdN" firstAttribute="leading" secondItem="3nw-cx-Uap" secondAttribute="leadingMargin" constant="12" id="omQ-5G-Yfb"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="SectionLabel" destination="yXs-Vd-xdN" id="n3h-hO-V5J"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="6Ja-iA-pQY" id="030-Hx-Nag"/>
                             <outlet property="delegate" destination="6Ja-iA-pQY" id="Yd7-2P-noN"/>
@@ -387,22 +409,6 @@ myTextView.layer.cornerRadius = 5.0; </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJ4-l4-DIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5380" y="1361"/>
-        </scene>
-        <!--Order Customer View Controller-->
-        <scene sceneID="Ufp-VW-O6M">
-            <objects>
-                <viewController id="EiO-xx-Hl6" customClass="orderCustomerViewController" customModule="Kelnero" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ly9-5q-aEf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="wk2-5O-K4c"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="2ju-oS-Fc9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bbZ-mp-FIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4376.8000000000002" y="2134.1829085457275"/>
         </scene>
         <!--My Tab Bar-->
         <scene sceneID="6uA-V9-e55">
@@ -477,12 +483,41 @@ myTextView.layer.cornerRadius = 5.0; </string>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EiO-xx-Hl6" kind="relationship" relationship="rootViewController" id="w31-em-zVn"/>
+                        <segue destination="W4Z-aA-h2v" kind="relationship" relationship="rootViewController" id="9Ip-gk-dSF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ees-jX-3Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3437.5999999999999" y="2134.1829085457275"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="yje-ks-q21">
+            <objects>
+                <tableViewController id="W4Z-aA-h2v" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zjn-PW-OwW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="WbJ-J3-jeF">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WbJ-J3-jeF" id="MPN-E8-TaF">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W4Z-aA-h2v" id="iPv-dB-qQ5"/>
+                            <outlet property="delegate" destination="W4Z-aA-h2v" id="W0t-nx-m5V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="VqC-MH-YjM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToS-Ro-pkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4376.8000000000002" y="2133.2833583208399"/>
         </scene>
     </scenes>
     <resources>
