@@ -20,10 +20,11 @@ let tiramisu = Dish(restaurant: restaurant, name: "Tiramisù", price: 8, descrip
 var primiPiatti = [Dish]()
 var desserts = [Dish]()
 
-var menu = [
-    primiPiatti,
-    desserts
-]
+var menu = [[Dish]]()
+//var menu = [
+//    primiPiatti,
+//    desserts
+//]
 
 
 class MenuCustomerCollectionViewController: UICollectionViewController {
@@ -41,6 +42,16 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         
         desserts.append(tiramisu)
 
+        
+        DishModel.getAllDishesByRestaurantId(restaurantId: "46da4a3ab2106811eecd8e73ea204468") {
+            (menu2, error) in
+            if let e = error {
+                print(e)
+            }
+            else {
+                menu = menu2
+            }
+        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
