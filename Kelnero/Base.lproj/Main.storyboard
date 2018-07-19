@@ -100,16 +100,7 @@
                             <outlet property="delegate" destination="S6M-2X-a1d" id="5Jo-xA-XYv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Orders" id="5uV-ez-Fe3">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="tpV-8U-dmt">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oFP-vo-2iJ">
-                                <rect key="frame" x="289" y="7" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back to qr"/>
-                            </button>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Orders" id="5uV-ez-Fe3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YvC-dN-7Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +187,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="14W-BK-l72"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Dish" id="zPO-83-AfD"/>
+                    <navigationItem key="navigationItem" title="Add Dish" id="zPO-83-AfD">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="sF0-MI-Y77">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tWV-kR-Jpk">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back to qr"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryField" destination="XFC-X0-9S9" id="vOz-I7-kWg"/>
                         <outlet property="descriptionField" destination="JOG-6p-LwV" id="bEz-eP-P1h"/>
