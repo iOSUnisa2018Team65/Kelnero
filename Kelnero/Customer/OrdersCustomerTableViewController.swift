@@ -8,7 +8,7 @@
 
 import UIKit
 
-var orders = [OrderRow]()
+
 
 public extension UIView {
     public func round() {
