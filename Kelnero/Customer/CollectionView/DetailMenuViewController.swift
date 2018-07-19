@@ -31,18 +31,28 @@ class DetailMenuViewController: UIViewController {
         let newOrder: OrderRow = OrderRow(restaurant: restaurant, table: 2, dish: dishDetail!, quantity: quantity, state: 1)
         
         orders.append(newOrder)
+        //implementare icloud
 //        OrderRowModel.addNew(orderRow: newOrder, completionHandler: <#T##(OrderRow, Error?) -> Void#>)
+        
+        let alert = UIAlertController(title: "Added to orders", message: "Go in orders tab to manage your orders", preferredStyle: .alert)
+        
+        let gobackalert = UIAlertAction(title: "Return to menu", style: .default){ (action:UIAlertAction!) in
+            self.navigationController?.popViewController(animated: true)
+        }
+      
+        alert.addAction(gobackalert)
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        stepper.wraps = true
         stepper.autorepeat = true
         stepper.maximumValue = 10
         stepper.minimumValue = 1
         imageDish.image = dishDetail?.photo
         nameLabel.text = dishDetail?.name
         descriptionLabel.text = dishDetail?.descr
+        stepper.value = 1
 
         // Do any additional setup after loading the view.
     }

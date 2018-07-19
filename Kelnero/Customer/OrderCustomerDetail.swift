@@ -39,7 +39,6 @@ class OrderCustomerDetail: UIViewController {
         imageDish.image = order?.dish.photo
         descriptionLabel.text = order?.dish.descr
         quantityLabel.text = order?.quantity.description
-        stepper.wraps = true
         stepper.autorepeat = true
         stepper.maximumValue = 10
         stepper.minimumValue = 1
