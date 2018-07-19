@@ -114,16 +114,18 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
 //
 //        return returnValue
     }
+    
+   
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! MenuCustomerCollectionViewCell
 
         cell.textLabel.text = "\(menu[indexPath.section][indexPath.row].name)"
         cell.image.image = menu[indexPath.section][indexPath.row].photo
-
+        
         return cell
     }
-    
+  
     // change background color when user touches cell
     override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
