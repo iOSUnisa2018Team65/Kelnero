@@ -264,7 +264,7 @@ myTextView.layer.cornerRadius = 5.0; </string>
             </objects>
             <point key="canvasLocation" x="4510" y="-107"/>
         </scene>
-        <!--Generate Qr View Controller-->
+        <!--Generate QR-->
         <scene sceneID="V9C-rc-v6j">
             <objects>
                 <viewController id="Kx4-a7-qGJ" customClass="GenerateQrViewController" customModule="Kelnero" customModuleProvider="target" sceneMemberID="viewController">
@@ -306,7 +306,7 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lhj-Zn-WSb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ofH-Pj-c7s"/>
+                    <navigationItem key="navigationItem" title="Generate QR" id="ofH-Pj-c7s"/>
                     <connections>
                         <outlet property="imageView" destination="YRg-mP-Af7" id="n6C-Tp-bNL"/>
                         <outlet property="spinner" destination="CbG-7L-awT" id="art-fs-o2H"/>
