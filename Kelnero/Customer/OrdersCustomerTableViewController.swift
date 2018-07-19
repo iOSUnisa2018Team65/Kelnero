@@ -8,27 +8,30 @@
 
 import UIKit
 
+var orders = [OrderRow]()
+
 class OrdersCustomerTableViewController: UITableViewController {
-    
-    
-    var orders = [OrderRow]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let pizzaorder = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 2)
+        orders.append(pizzaorder)
         
+        /* Da fixare il fetch 
         OrderRowModel.getAllOrderRowsByTable(restaurantId: "46da4a3ab2106811eecd8e73ea204468", tableNumber: 2) {
             (ordersList, error) in
                 if let e = error {
 //                    gestisci errore
-                    
                 }
                 else {
-                    self.orders = ordersList
-                    print(self.orders)
-                  
+                    orders = ordersList
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+
                 }
             
-        }
+        }*/
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -40,8 +43,9 @@ class OrdersCustomerTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.isEditing = false
         tableView.reloadData()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,7 +54,7 @@ class OrdersCustomerTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return orders.count
     }
     
@@ -65,7 +69,16 @@ class OrdersCustomerTableViewController: UITableViewController {
         return cell
     }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            orders.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -84,6 +97,7 @@ class OrdersCustomerTableViewController: UITableViewController {
             let currentidx = tableView.indexPathForSelectedRow?.row
             let order = segue.destination as! OrderCustomerDetail
             order.order = orders[currentidx!]
+            order.orderIdx = currentidx
         default:
             preconditionFailure("Invalid segue identifier.")
         }

@@ -27,6 +27,8 @@ class welcomeCustomerViewController: UIViewController {
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var tableLabel: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var image: UIImageView!
+    
     
     override func viewWillAppear(_ animated: Bool) {
         if qrCode == "" {
@@ -52,8 +54,10 @@ class welcomeCustomerViewController: UIViewController {
                     var restaurantName = r!.name
                     DispatchQueue.main.async {
                         self.spinner.stopAnimating()
+                        self.image.image = UIImage(named: "table")
                         self.restaurantNameLabel.text = restaurantName
-                        self.tableLabel.text = "You're sitting at table " + self.tableNumber
+                        self.tableLabel.text = "You're sitting at Table " + self.tableNumber
+                        
                     }
                 }
             }

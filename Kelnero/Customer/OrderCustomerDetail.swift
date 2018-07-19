@@ -11,6 +11,7 @@ import UIKit
 class OrderCustomerDetail: UIViewController {
     
     var order: OrderRow?
+    var orderIdx: Int?
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageDish: UIImageView!
@@ -18,7 +19,12 @@ class OrderCustomerDetail: UIViewController {
     @IBOutlet weak var quantityLabel: UILabel!
     
     @IBAction func deleteDishFromOrder(_ sender: Any) {
+        orders.remove(at: orderIdx!)
+        //da implementare icloud
+        //OrderRowModel.remove
+        _ = navigationController?.popViewController(animated: true)
     }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = order?.dish.name
