@@ -130,6 +130,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         objectSelected = menu[indexPath.section][indexPath.row]
         cell?.layer.borderWidth = 3
         cell?.layer.borderColor = UIColor.red.cgColor
+        //
     }
     
     // change background color back when user releases touch
