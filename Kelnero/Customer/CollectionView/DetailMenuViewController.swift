@@ -23,6 +23,15 @@ class DetailMenuViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBAction func addToOrderButton(_ sender: Any) {
+        var quantity: Int = 1
+        if Int(quantityLabel.text!) != nil {
+            quantity = Int(quantityLabel.text!)!
+
+        }
+        let newOrder: OrderRow = OrderRow(restaurant: restaurant, table: 2, dish: dishDetail!, quantity: quantity, state: 1)
+        
+        orders.append(newOrder)
+//        OrderRowModel.addNew(orderRow: newOrder, completionHandler: <#T##(OrderRow, Error?) -> Void#>)
     }
     
     override func viewDidLoad() {

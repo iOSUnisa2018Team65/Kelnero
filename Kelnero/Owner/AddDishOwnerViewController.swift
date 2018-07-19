@@ -26,6 +26,8 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
         // Do any additional setup after loading the view.
         imageView.image = UIImage(named: "imageDefault")
         spinner.hidesWhenStopped = true
+        priceField.keyboardType = .numberPad
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -77,8 +79,10 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
         let price = (priceField.text as! NSString).doubleValue
         let category = categoryField.text
         let description = descriptionField.text
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
         
         if name == "" || priceField.text == "" || category == "" || description == "" {
+            
             let alert = UIAlertController(title: "Cannot perform saving", message: "Please fill all fields", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true)
