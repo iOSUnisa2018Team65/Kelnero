@@ -586,16 +586,8 @@
                                     <action selector="addToOrderButton:" destination="6rO-KE-Am0" eventType="touchUpInside" id="p3n-n4-iiY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7G-lf-SKq">
-                                <rect key="frame" x="56" y="565" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eb2-oO-8hq" firstAttribute="centerX" secondItem="7bw-Hs-eum" secondAttribute="centerX" id="3ar-7T-OCm"/>
@@ -614,7 +606,6 @@
                             <constraint firstItem="3dN-lU-f4q" firstAttribute="top" secondItem="eb2-oO-8hq" secondAttribute="bottom" constant="43.5" id="v1x-00-TOu"/>
                             <constraint firstItem="gTH-ec-sxy" firstAttribute="top" secondItem="aoq-O0-ef7" secondAttribute="bottom" constant="55" id="yUD-xi-BC0"/>
                         </constraints>
-
                         <viewLayoutGuide key="safeArea" id="Fyw-9w-I2O"/>
                     </view>
                     <connections>
