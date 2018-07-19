@@ -32,21 +32,25 @@ class DishModel: NSObject {
         record[categoryField] = dishToAdd.category as NSString
         record[descriptionField] = dishToAdd.descr as NSString
         
-        // image will have same name as dish
-        let resourceName = key
-        let imgPng = UIImagePNGRepresentation(dishToAdd.photo)
-        let tempDirectoryURL = NSURL.fileURL(withPath: NSTemporaryDirectory(), isDirectory: true)
-        // Create a destination URL.
-        let targetURL = tempDirectoryURL.appendingPathComponent("\(resourceName).png")
-        // Write the image locally.
-        do {
-            try imgPng?.write(to: targetURL)
-        } catch let error {
-            print("Error in adding a new dish")
-            NSLog("Unable to write file: \(error)")
-        }
-        let asset = CKAsset(fileURL: targetURL)
-        record[photoField] = asset
+        /*
+         // image will have same name as dish
+         let resourceName = key
+         let imgPng = UIImagePNGRepresentation(dishToAdd.photo)
+         let tempDirectoryURL = NSURL.fileURL(withPath: NSTemporaryDirectory(), isDirectory: true)
+         // Create a destination URL.
+         let targetURL = tempDirectoryURL.appendingPathComponent("\(resourceName).png")
+         // Write the image locally.
+         do {
+         try imgPng?.write(to: targetURL)
+         } catch let error {
+         print("Error in adding a new dish")
+         NSLog("Unable to write file: \(error)")
+         }
+         let asset = CKAsset(fileURL: targetURL)
+         record[photoField] = asset
+         */
+
+        record[photoField] = UIImageJPEGRepresentation(dishToAdd.photo, 0.5)! as NSData
         
         // saving
         let container = CKContainer.default()
@@ -57,6 +61,52 @@ class DishModel: NSObject {
             handler(dishToAdd, error)
         }
     }
+    
+    
+    class func getDishByName(restaurantId restId: String, dishName dishName: String, completionHandler handler: @escaping (Dish?, Error?) -> (Void)) {
+        var whereClause = NSPredicate(format: "%K == %@ AND %K == %@", restaurantIdField, restId, nameField, dishName)
+        var query = CKQuery(recordType: recordType, predicate: whereClause)
+        var rest: Restaurant? = nil
+        RestaurantModel.getById(idToSearch: restId) {
+            (r, error) in
+            if let e = error {
+                handler(nil, e)
+                return
+            }
+            else {
+                rest = r!
+                
+                let container = CKContainer.default()
+                let db = container.publicCloudDatabase
+                
+                db.perform(query, inZoneWith: nil) {
+                    (records, error) in
+                    if let e = error {
+                        handler(nil, e)
+                    }
+                    else {
+                        var record = records?[0]
+                        var fetchedRecord = record!
+                        var name = fetchedRecord[nameField] as! String
+                        var price = fetchedRecord[priceField] as! Double
+                        var category = fetchedRecord[categoryField] as! String
+                        var descr = fetchedRecord[descriptionField] as! String
+                        /*
+                         var asset = fetchedRecord[photoField] as! CKAsset
+                         var assetUrl = asset.fileURL
+                         var img = NSData(contentsOf: assetUrl)
+                         var photo = UIImage(data: img as! Data)!
+                         */
+
+                        var photo = UIImage(data: (fetchedRecord[photoField] as! NSData) as Data)
+                        var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo!)
+                        handler(d, nil)
+                    }
+                }
+            }
+        }
+    }
+    
     
     
     class func getAllDishesByRestaurantId(restaurantId restId: String, completionHandler handler: @escaping ([[Dish]], Error?) -> (Void)) {
@@ -88,11 +138,14 @@ class DishModel: NSObject {
                             var price = fetchedRecord[priceField] as! Double
                             var category = fetchedRecord[categoryField] as! String
                             var descr = fetchedRecord[descriptionField] as! String
-                            var asset = fetchedRecord[photoField] as! CKAsset
-                            var assetUrl = asset.fileURL
-                            var img = NSData(contentsOf: assetUrl)
-                            var photo = UIImage(data: img as! Data)!
-                            var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo)
+                            var photo = UIImage(data: (fetchedRecord[photoField] as! NSData) as Data)
+                            /*var asset = fetchedRecord[photoField] as! CKAsset
+                             var assetUrl = asset.fileURL
+                             var img = NSData(contentsOf: assetUrl)
+                             var photo = UIImage(data: img as! Data)!
+                             */
+
+                            var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo!)
                             if categories.contains(category) {
                                 var i = categories.index(of: category)!
                                 menu[i].append(d)

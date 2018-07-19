@@ -13,6 +13,7 @@ class welcomeCustomerViewController: UIViewController {
     var qrCode: String = ""
     var restaurantKey: String = ""
     var tableNumber: String = ""
+    var bool: Bool = true
     
     @IBAction func backToQr(_ sender: Any) {
         DispatchQueue.main.async{
@@ -31,7 +32,10 @@ class welcomeCustomerViewController: UIViewController {
         if qrCode == "" {
             restaurantNameLabel.text = "No qrcode"
         }else{
-            spinner.startAnimating()
+            if bool == true{
+                spinner.startAnimating()
+                bool = false
+            }
             var str = qrCode
             // var str = "46da4a3ab2106811eecd8e73ea204468_2" //used in debug when no qr code available
             restaurantKey = String(str.split(separator: "_")[0])

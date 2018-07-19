@@ -15,14 +15,17 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var categoryField: UITextField!
     @IBOutlet weak var descriptionField: UITextView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var saveButton: UIButton!
     
     var image: UIImage!
     var ownerId = "46da4a3ab2106811eecd8e73ea204468"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        imageView.image = UIImage(named: "imageDefault")
+        spinner.hidesWhenStopped = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -46,7 +49,8 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
         // If the device has a camera, take a picture, otherwise,
         // just pick from photo library
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            imagePicker.sourceType = .camera
+            imagePicker.sourceType = .photoLibrary
+            //imagePicker.sourceType = .camera
         } else {
             imagePicker.sourceType = .photoLibrary
         }
@@ -68,10 +72,22 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
         let name = nameField.text
         let price = (priceField.text as! NSString).doubleValue
         let category = categoryField.text
         let description = descriptionField.text
+        
+        if name == "" || priceField.text == "" || category == "" || description == "" {
+            let alert = UIAlertController(title: "Cannot perform saving", message: "Please fill all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        spinner.startAnimating()
+        saveButton.isEnabled = false
+        
         let image = self.image
         RestaurantModel.getById(idToSearch: ownerId) {
             (fetchedRestaurant, error) in
@@ -90,14 +106,30 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                     }
                     else {
                         print("Dish \(dish.name) successfully saved.")
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Dish Saved", message: "\(dish.name) successfully added to menu", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                            
+                            self.spinner.stopAnimating()
+                            self.imageView.image = UIImage(named: "imageDefault")
+                            self.nameField.text = ""
+                            self.categoryField.text = ""
+                            self.descriptionField.text = ""
+                            self.priceField.text = ""
+                            self.saveButton.isEnabled = true
+                        }
                     }
                 }
             }
         }
     }
-    
+
+
+
+    /*
     @IBAction func prova(_ sender: UIButton) {
-        DishModel.getAllDishesByRestaurantId(restaurantId: ownerId) {
+        /*DishModel.getAllDishesByRestaurantId(restaurantId: ownerId) {
             (menu, error) in
             if let e = error {
                 print(e)
@@ -111,8 +143,70 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                     }
                 }
             }
+        }*/
+        /*
+        RestaurantModel.getById(idToSearch: ownerId) {
+            (r, error) in
+            if let e = error {
+                print(e)
+            }
+            else {
+                var dish = Dish(restaurant: r!, name: "giulietta123456789", price: 2.5, category: "Dessert", description: "Ciao", photo: UIImage(named: "Image")!)
+                DishModel.addNew(dish: dish) {
+                    (d, error) in
+                    if let e = error {
+                        print(e)
+                    }
+                    else {
+                        var order = OrderRow(restaurant: r!, table: 2, dish: d, quantity: 2, state: 1)
+                        OrderRowModel.addNew(orderRow: order) {
+                            (o, error) in
+                                if let e = error {
+                                    print(e)
+                                }
+                                else {
+                                    OrderRowModel.getAllOrderRowsByTable(restaurantId: self.ownerId, tableNumber: 2) {
+                                        (collection, error) in
+                                        if let e = error {
+                                            print(e)
+                                        }
+                                        else {
+                                            print("WEEEEEE")
+                                            for o in collection {
+                                                print(o)
+                                            }
+                                        }
+                                    }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+ */
+        
+        DishModel.getDishByName(restaurantId: ownerId, dishName: "Hamburger") {
+            (d, error) in
+            if let e = error {
+                print(e)
+            }
+            else {
+                var rest = d?.restaurant
+                var order = OrderRow(restaurant: rest!, table: 2, dish: d!, quantity: 1, state: 1)
+                OrderRowModel.addNew(orderRow: order) {
+                    (o, error) in
+                    if let e = error {
+                        print(e)
+                    }
+                    else {
+                        print("OK")
+                    }
+                }
+            }
         }
     }
+ */
+    
     
     /*
      // MARK: - Navigation

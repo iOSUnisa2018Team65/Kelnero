@@ -11,8 +11,14 @@ import UIKit
 class OrdersCustomerTableViewController: UITableViewController {
     
     
+    var orders = [OrderRow]()
+    let restaurant = Restaurant(ownerIcloudId: "_33caratteri", name: "Da Mario", address: "Via Mario Rossi")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ordine1 = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 3)
+        orders.append(ordine1)
+        
         
         
         // Uncomment the following line to preserve selection between presentations
@@ -42,7 +48,9 @@ class OrdersCustomerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
         
-        // Configure the cell...
+        cell.imageView?.image = orders[indexPath.row].dish.photo
+        cell.detailTextLabel?.text = String(orders[indexPath.row].quantity)
+        cell.textLabel?.text = orders[indexPath.row].dish.name
         
         return cell
     }
@@ -55,28 +63,22 @@ class OrdersCustomerTableViewController: UITableViewController {
      return true
      }
      */
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120.0
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         switch segue.identifier {
         case "showOrder"?:
-            break
+            let currentidx = tableView.indexPathForSelectedRow?.row
+            let order = segue.destination as! OrderCustomerDetail
+            order.order = orders[currentidx!]
         default:
             preconditionFailure("Invalid segue identifier.")
         }
         
-        if segue.identifier == "showOrder" {
-            
-            // Figure out which row was just tapped
-            //            if let row = tableView.indexPathForSelectedRow?.row {
-            
-            // Get the item associated with this row and pass it along
-            //                let item = itemStore.allItems[row]
-            //                let detailViewController = segue.destination as! DetailViewController
-            //                detailViewController.item = item
-            //                detailViewController.imageStore = imageStore
-            //            }
-        }
+        
     }
     
     /*

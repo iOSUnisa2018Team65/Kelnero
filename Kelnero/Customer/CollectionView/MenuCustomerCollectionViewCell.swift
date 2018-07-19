@@ -16,7 +16,7 @@ class MenuCustomerCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.contentView.backgroundColor = UIColor(red: 230.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+      
         self.layer.cornerRadius = 3
         
         
