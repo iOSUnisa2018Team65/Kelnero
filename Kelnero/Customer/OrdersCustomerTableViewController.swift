@@ -12,13 +12,23 @@ class OrdersCustomerTableViewController: UITableViewController {
     
     
     var orders = [OrderRow]()
-    let restaurant = Restaurant(ownerIcloudId: "_33caratteri", name: "Da Mario", address: "Via Mario Rossi")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ordine1 = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 3)
-        orders.append(ordine1)
         
+        OrderRowModel.getAllOrderRowsByTable(restaurantId: "46da4a3ab2106811eecd8e73ea204468", tableNumber: 2) {
+            (ordersList, error) in
+                if let e = error {
+//                    gestisci errore
+                    
+                }
+                else {
+                    self.orders = ordersList
+                    print(self.orders)
+                  
+                }
+            
+        }
         
         
         // Uncomment the following line to preserve selection between presentations
