@@ -33,22 +33,23 @@ class DishModel: NSObject {
         record[descriptionField] = dishToAdd.descr as NSString
         
         /*
-        // image will have same name as dish
-        let resourceName = key
-        let imgPng = UIImagePNGRepresentation(dishToAdd.photo)
-        let tempDirectoryURL = NSURL.fileURL(withPath: NSTemporaryDirectory(), isDirectory: true)
-        // Create a destination URL.
-        let targetURL = tempDirectoryURL.appendingPathComponent("\(resourceName).png")
-        // Write the image locally.
-        do {
-            try imgPng?.write(to: targetURL)
-        } catch let error {
-            print("Error in adding a new dish")
-            NSLog("Unable to write file: \(error)")
-        }
-        let asset = CKAsset(fileURL: targetURL)
-        record[photoField] = asset
-        */
+         // image will have same name as dish
+         let resourceName = key
+         let imgPng = UIImagePNGRepresentation(dishToAdd.photo)
+         let tempDirectoryURL = NSURL.fileURL(withPath: NSTemporaryDirectory(), isDirectory: true)
+         // Create a destination URL.
+         let targetURL = tempDirectoryURL.appendingPathComponent("\(resourceName).png")
+         // Write the image locally.
+         do {
+         try imgPng?.write(to: targetURL)
+         } catch let error {
+         print("Error in adding a new dish")
+         NSLog("Unable to write file: \(error)")
+         }
+         let asset = CKAsset(fileURL: targetURL)
+         record[photoField] = asset
+         */
+
         record[photoField] = UIImageJPEGRepresentation(dishToAdd.photo, 0.5)! as NSData
         
         // saving
@@ -91,19 +92,20 @@ class DishModel: NSObject {
                         var category = fetchedRecord[categoryField] as! String
                         var descr = fetchedRecord[descriptionField] as! String
                         /*
-                        var asset = fetchedRecord[photoField] as! CKAsset
-                        var assetUrl = asset.fileURL
-                        var img = NSData(contentsOf: assetUrl)
-                        var photo = UIImage(data: img as! Data)!
-                        */
+                         var asset = fetchedRecord[photoField] as! CKAsset
+                         var assetUrl = asset.fileURL
+                         var img = NSData(contentsOf: assetUrl)
+                         var photo = UIImage(data: img as! Data)!
+                         */
+
                         var photo = UIImage(data: (fetchedRecord[photoField] as! NSData) as Data)
                         var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo!)
                         handler(d, nil)
-                        }
                     }
                 }
             }
         }
+    }
     
     
     
@@ -138,9 +140,11 @@ class DishModel: NSObject {
                             var descr = fetchedRecord[descriptionField] as! String
                             var photo = UIImage(data: (fetchedRecord[photoField] as! NSData) as Data)
                             /*var asset = fetchedRecord[photoField] as! CKAsset
-                            var assetUrl = asset.fileURL
-                            var img = NSData(contentsOf: assetUrl)
-                            var photo = UIImage(data: img as! Data)!*/
+                             var assetUrl = asset.fileURL
+                             var img = NSData(contentsOf: assetUrl)
+                             var photo = UIImage(data: img as! Data)!
+                             */
+
                             var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo!)
                             if categories.contains(category) {
                                 var i = categories.index(of: category)!

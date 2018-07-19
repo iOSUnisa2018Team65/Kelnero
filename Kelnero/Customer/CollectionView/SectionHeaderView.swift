@@ -18,7 +18,6 @@ class SectionHeaderView: UICollectionReusableView {
     }
     
     override func awakeFromNib() {
-        self.backgroundColor = .red
         
     }
 }
