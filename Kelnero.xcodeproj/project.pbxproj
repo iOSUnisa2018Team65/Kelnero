@@ -1,500 +1,500 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 50;
-	objects = {
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 50;
+    objects = {
 
 /* Begin PBXBuildFile section */
-		3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */; };
-		3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591D2100886900577185 /* DetailMenuViewController.swift */; };
-		3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
-		3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
-		3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */; };
-		3395E79120FF858B0021410C /* MyTabBarOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E79020FF858B0021410C /* MyTabBarOwner.swift */; };
-		33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */; };
-		33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */; };
-		33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */; };
-		33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0520FC9F440005186C /* MyTabBar.swift */; };
-		7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */; };
-		7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539E20FDE93C003EC57E /* IcloudUtils.swift */; };
-		7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */; };
-		7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A220FDE9E2003EC57E /* Dish.swift */; };
-		7B4153A520FDEA03003EC57E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A420FDEA03003EC57E /* Restaurant.swift */; };
-		7B4153A720FDEA20003EC57E /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A620FDEA20003EC57E /* OrderRow.swift */; };
-		7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A820FDEA4B003EC57E /* DishModel.swift */; };
-		7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */; };
-		7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */; };
-		7B4153AF20FDEA7E003EC57E /* GenerateQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */; };
-		7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935320F79A58009F41B7 /* AppDelegate.swift */; };
-		7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
-		7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935720F79A58009F41B7 /* Main.storyboard */; };
-		7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */; };
-		7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */; };
-		7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEA936A20F79D5A009F41B7 /* CloudKit.framework */; };
-		BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFF793D20FDEAAC00051989 /* Assets.xcassets */; };
-		FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */; };
+        3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */; };
+        3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591D2100886900577185 /* DetailMenuViewController.swift */; };
+        3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
+        3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
+        3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */; };
+        3395E79120FF858B0021410C /* MyTabBarOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E79020FF858B0021410C /* MyTabBarOwner.swift */; };
+        33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */; };
+        33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */; };
+        33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */; };
+        33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0520FC9F440005186C /* MyTabBar.swift */; };
+        7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */; };
+        7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539E20FDE93C003EC57E /* IcloudUtils.swift */; };
+        7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */; };
+        7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A220FDE9E2003EC57E /* Dish.swift */; };
+        7B4153A520FDEA03003EC57E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A420FDEA03003EC57E /* Restaurant.swift */; };
+        7B4153A720FDEA20003EC57E /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A620FDEA20003EC57E /* OrderRow.swift */; };
+        7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A820FDEA4B003EC57E /* DishModel.swift */; };
+        7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */; };
+        7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */; };
+        7B4153AF20FDEA7E003EC57E /* GenerateQrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */; };
+        7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935320F79A58009F41B7 /* AppDelegate.swift */; };
+        7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935520F79A58009F41B7 /* ViewController.swift */; };
+        7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935720F79A58009F41B7 /* Main.storyboard */; };
+        7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */; };
+        7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */; };
+        7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEA936A20F79D5A009F41B7 /* CloudKit.framework */; };
+        BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEFF793D20FDEAAC00051989 /* Assets.xcassets */; };
+        FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomerDetail.swift; sourceTree = "<group>"; };
-		3324591D2100886900577185 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
-		3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
-		3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
-		3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
-		3395E79020FF858B0021410C /* MyTabBarOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarOwner.swift; sourceTree = "<group>"; };
-		33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
-		33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCustomerViewController.swift; sourceTree = "<group>"; };
-		33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCustomerViewController.swift; sourceTree = "<group>"; };
-		33F3EB0520FC9F440005186C /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
-		7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishOwnerViewController.swift; sourceTree = "<group>"; };
-		7B41539E20FDE93C003EC57E /* IcloudUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcloudUtils.swift; sourceTree = "<group>"; };
-		7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeUtils.swift; sourceTree = "<group>"; };
-		7B4153A220FDE9E2003EC57E /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
-		7B4153A420FDEA03003EC57E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		7B4153A620FDEA20003EC57E /* OrderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
-		7B4153A820FDEA4B003EC57E /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
-		7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowModel.swift; sourceTree = "<group>"; };
-		7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
-		7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQrViewController.swift; sourceTree = "<group>"; };
-		7BEA935020F79A58009F41B7 /* Kelnero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelnero.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BEA935320F79A58009F41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BEA935520F79A58009F41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7BEA935820F79A58009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kelnero.xcdatamodel; sourceTree = "<group>"; };
-		7BEA936020F79A59009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7BEA936220F79A59009F41B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BEA936820F79D58009F41B7 /* Kelnero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelnero.entitlements; sourceTree = "<group>"; };
-		7BEA936A20F79D5A009F41B7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		BEFF793D20FDEAAC00051989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewController.swift; sourceTree = "<group>"; };
+        3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomerDetail.swift; sourceTree = "<group>"; };
+        3324591D2100886900577185 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
+        3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
+        3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
+        3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+        3395E79020FF858B0021410C /* MyTabBarOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarOwner.swift; sourceTree = "<group>"; };
+        33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
+        33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCustomerViewController.swift; sourceTree = "<group>"; };
+        33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCustomerViewController.swift; sourceTree = "<group>"; };
+        33F3EB0520FC9F440005186C /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+        7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishOwnerViewController.swift; sourceTree = "<group>"; };
+        7B41539E20FDE93C003EC57E /* IcloudUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcloudUtils.swift; sourceTree = "<group>"; };
+        7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeUtils.swift; sourceTree = "<group>"; };
+        7B4153A220FDE9E2003EC57E /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+        7B4153A420FDEA03003EC57E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+        7B4153A620FDEA20003EC57E /* OrderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
+        7B4153A820FDEA4B003EC57E /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
+        7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowModel.swift; sourceTree = "<group>"; };
+        7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+        7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateQrViewController.swift; sourceTree = "<group>"; };
+        7BEA935020F79A58009F41B7 /* Kelnero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelnero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        7BEA935320F79A58009F41B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+        7BEA935520F79A58009F41B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+        7BEA935820F79A58009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+        7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kelnero.xcdatamodel; sourceTree = "<group>"; };
+        7BEA936020F79A59009F41B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+        7BEA936220F79A59009F41B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+        7BEA936820F79D58009F41B7 /* Kelnero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kelnero.entitlements; sourceTree = "<group>"; };
+        7BEA936A20F79D5A009F41B7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+        BEFF793D20FDEAAC00051989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCustomerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7BEA934D20F79A58009F41B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        7BEA934D20F79A58009F41B7 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                7BEA936B20F79D5A009F41B7 /* CloudKit.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3395E78C20FF556D0021410C /* QR */ = {
-			isa = PBXGroup;
-			children = (
-				33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */,
-				7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */,
-				7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */,
-			);
-			path = QR;
-			sourceTree = "<group>";
-		};
-		3395E78D20FF55900021410C /* Owner */ = {
-			isa = PBXGroup;
-			children = (
-				7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
-				3395E79020FF858B0021410C /* MyTabBarOwner.swift */,
-			);
-			path = Owner;
-			sourceTree = "<group>";
-		};
-		3395E78E20FF55BA0021410C /* Customer */ = {
-			isa = PBXGroup;
-			children = (
-				3395E78F20FF55E00021410C /* CollectionView */,
-				33F3EB0520FC9F440005186C /* MyTabBar.swift */,
-				33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
-				33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */,
-				FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */,
-				3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */,
-			);
-			path = Customer;
-			sourceTree = "<group>";
-		};
-		3395E78F20FF55E00021410C /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
-				3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
-				3324591D2100886900577185 /* DetailMenuViewController.swift */,
-				3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
-			);
-			path = CollectionView;
-			sourceTree = "<group>";
-		};
-		7BEA934720F79A58009F41B7 = {
-			isa = PBXGroup;
-			children = (
-				7BEA935220F79A58009F41B7 /* Kelnero */,
-				7BEA935120F79A58009F41B7 /* Products */,
-				7BEA936920F79D5A009F41B7 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		7BEA935120F79A58009F41B7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7BEA935020F79A58009F41B7 /* Kelnero.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7BEA935220F79A58009F41B7 /* Kelnero */ = {
-			isa = PBXGroup;
-			children = (
-				3395E78E20FF55BA0021410C /* Customer */,
-				3395E78D20FF55900021410C /* Owner */,
-				3395E78C20FF556D0021410C /* QR */,
-				BEFF793D20FDEAAC00051989 /* Assets.xcassets */,
-				7BEA936820F79D58009F41B7 /* Kelnero.entitlements */,
-				7BEA935320F79A58009F41B7 /* AppDelegate.swift */,
-				7BEA935520F79A58009F41B7 /* ViewController.swift */,
-				7BEA935720F79A58009F41B7 /* Main.storyboard */,
-				7BEA936220F79A59009F41B7 /* Info.plist */,
-				7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */,
-				7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */,
-				7B41539E20FDE93C003EC57E /* IcloudUtils.swift */,
-				7B4153A220FDE9E2003EC57E /* Dish.swift */,
-				7B4153A420FDEA03003EC57E /* Restaurant.swift */,
-				7B4153A620FDEA20003EC57E /* OrderRow.swift */,
-				7B4153A820FDEA4B003EC57E /* DishModel.swift */,
-				7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */,
-				7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */,
-			);
-			path = Kelnero;
-			sourceTree = "<group>";
-		};
-		7BEA936920F79D5A009F41B7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7BEA936A20F79D5A009F41B7 /* CloudKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
+        3395E78C20FF556D0021410C /* QR */ = {
+            isa = PBXGroup;
+            children = (
+                33F3EAFD20F8DB5C0005186C /* QrCodeViewController.swift */,
+                7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */,
+                7B4153AE20FDEA7E003EC57E /* GenerateQrViewController.swift */,
+            );
+            path = QR;
+            sourceTree = "<group>";
+        };
+        3395E78D20FF55900021410C /* Owner */ = {
+            isa = PBXGroup;
+            children = (
+                7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
+                3395E79020FF858B0021410C /* MyTabBarOwner.swift */,
+            );
+            path = Owner;
+            sourceTree = "<group>";
+        };
+        3395E78E20FF55BA0021410C /* Customer */ = {
+            isa = PBXGroup;
+            children = (
+                3395E78F20FF55E00021410C /* CollectionView */,
+                33F3EB0520FC9F440005186C /* MyTabBar.swift */,
+                33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */,
+                33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */,
+                FA25B38020FF673C00CC6730 /* OrdersCustomerTableViewController.swift */,
+                3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */,
+            );
+            path = Customer;
+            sourceTree = "<group>";
+        };
+        3395E78F20FF55E00021410C /* CollectionView */ = {
+            isa = PBXGroup;
+            children = (
+                3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
+                3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
+                3324591D2100886900577185 /* DetailMenuViewController.swift */,
+                3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
+            );
+            path = CollectionView;
+            sourceTree = "<group>";
+        };
+        7BEA934720F79A58009F41B7 = {
+            isa = PBXGroup;
+            children = (
+                7BEA935220F79A58009F41B7 /* Kelnero */,
+                7BEA935120F79A58009F41B7 /* Products */,
+                7BEA936920F79D5A009F41B7 /* Frameworks */,
+            );
+            sourceTree = "<group>";
+        };
+        7BEA935120F79A58009F41B7 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                7BEA935020F79A58009F41B7 /* Kelnero.app */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        7BEA935220F79A58009F41B7 /* Kelnero */ = {
+            isa = PBXGroup;
+            children = (
+                3395E78E20FF55BA0021410C /* Customer */,
+                3395E78D20FF55900021410C /* Owner */,
+                3395E78C20FF556D0021410C /* QR */,
+                BEFF793D20FDEAAC00051989 /* Assets.xcassets */,
+                7BEA936820F79D58009F41B7 /* Kelnero.entitlements */,
+                7BEA935320F79A58009F41B7 /* AppDelegate.swift */,
+                7BEA935520F79A58009F41B7 /* ViewController.swift */,
+                7BEA935720F79A58009F41B7 /* Main.storyboard */,
+                7BEA936220F79A59009F41B7 /* Info.plist */,
+                7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */,
+                7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */,
+                7B41539E20FDE93C003EC57E /* IcloudUtils.swift */,
+                7B4153A220FDE9E2003EC57E /* Dish.swift */,
+                7B4153A420FDEA03003EC57E /* Restaurant.swift */,
+                7B4153A620FDEA20003EC57E /* OrderRow.swift */,
+                7B4153A820FDEA4B003EC57E /* DishModel.swift */,
+                7B4153AA20FDEA5A003EC57E /* OrderRowModel.swift */,
+                7B4153AC20FDEA65003EC57E /* RestaurantModel.swift */,
+            );
+            path = Kelnero;
+            sourceTree = "<group>";
+        };
+        7BEA936920F79D5A009F41B7 /* Frameworks */ = {
+            isa = PBXGroup;
+            children = (
+                7BEA936A20F79D5A009F41B7 /* CloudKit.framework */,
+            );
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7BEA934F20F79A58009F41B7 /* Kelnero */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BEA936520F79A59009F41B7 /* Build configuration list for PBXNativeTarget "Kelnero" */;
-			buildPhases = (
-				7BEA934C20F79A58009F41B7 /* Sources */,
-				7BEA934D20F79A58009F41B7 /* Frameworks */,
-				7BEA934E20F79A58009F41B7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Kelnero;
-			productName = Kelnero;
-			productReference = 7BEA935020F79A58009F41B7 /* Kelnero.app */;
-			productType = "com.apple.product-type.application";
-		};
+        7BEA934F20F79A58009F41B7 /* Kelnero */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = 7BEA936520F79A59009F41B7 /* Build configuration list for PBXNativeTarget "Kelnero" */;
+            buildPhases = (
+                7BEA934C20F79A58009F41B7 /* Sources */,
+                7BEA934D20F79A58009F41B7 /* Frameworks */,
+                7BEA934E20F79A58009F41B7 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = Kelnero;
+            productName = Kelnero;
+            productReference = 7BEA935020F79A58009F41B7 /* Kelnero.app */;
+            productType = "com.apple.product-type.application";
+        };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7BEA934820F79A58009F41B7 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Team 6_5";
-				TargetAttributes = {
-					7BEA934F20F79A58009F41B7 = {
-						CreatedOnToolsVersion = 9.4.1;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-							com.apple.iCloud = {
-								enabled = 1;
-							};
-						};
-					};
-				};
-			};
-			buildConfigurationList = 7BEA934B20F79A58009F41B7 /* Build configuration list for PBXProject "Kelnero" */;
-			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 7BEA934720F79A58009F41B7;
-			productRefGroup = 7BEA935120F79A58009F41B7 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				7BEA934F20F79A58009F41B7 /* Kelnero */,
-			);
-		};
+        7BEA934820F79A58009F41B7 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastSwiftUpdateCheck = 0940;
+                LastUpgradeCheck = 0940;
+                ORGANIZATIONNAME = "Team 6_5";
+                TargetAttributes = {
+                    7BEA934F20F79A58009F41B7 = {
+                        CreatedOnToolsVersion = 9.4.1;
+                        SystemCapabilities = {
+                            com.apple.Push = {
+                                enabled = 1;
+                            };
+                            com.apple.iCloud = {
+                                enabled = 1;
+                            };
+                        };
+                    };
+                };
+            };
+            buildConfigurationList = 7BEA934B20F79A58009F41B7 /* Build configuration list for PBXProject "Kelnero" */;
+            compatibilityVersion = "Xcode 9.3";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+                Base,
+            );
+            mainGroup = 7BEA934720F79A58009F41B7;
+            productRefGroup = 7BEA935120F79A58009F41B7 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                7BEA934F20F79A58009F41B7 /* Kelnero */,
+            );
+        };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7BEA934E20F79A58009F41B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */,
-				BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */,
-				7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        7BEA934E20F79A58009F41B7 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                7BEA936120F79A59009F41B7 /* LaunchScreen.storyboard in Resources */,
+                BEFF793E20FDEAAD00051989 /* Assets.xcassets in Resources */,
+                7BEA935920F79A58009F41B7 /* Main.storyboard in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7BEA934C20F79A58009F41B7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B4153AF20FDEA7E003EC57E /* GenerateQrViewController.swift in Sources */,
-				7B4153A520FDEA03003EC57E /* Restaurant.swift in Sources */,
-				7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
-				7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */,
-				7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */,
-				FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */,
-				3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
-				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
-				3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */,
-				3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */,
-				7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */,
-				33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */,
-				7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */,
-				33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */,
-				7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */,
-				7B4153A720FDEA20003EC57E /* OrderRow.swift in Sources */,
-				7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */,
-				3395E79120FF858B0021410C /* MyTabBarOwner.swift in Sources */,
-				7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */,
-				33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */,
-				3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */,
-				3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */,
-				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
-				7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+        7BEA934C20F79A58009F41B7 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                7B4153AF20FDEA7E003EC57E /* GenerateQrViewController.swift in Sources */,
+                7B4153A520FDEA03003EC57E /* Restaurant.swift in Sources */,
+                7BEA935620F79A58009F41B7 /* ViewController.swift in Sources */,
+                7B4153AB20FDEA5A003EC57E /* OrderRowModel.swift in Sources */,
+                7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */,
+                FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */,
+                3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
+                33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
+                3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */,
+                3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */,
+                7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */,
+                33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */,
+                7B4153A920FDEA4B003EC57E /* DishModel.swift in Sources */,
+                33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */,
+                7BEA935C20F79A58009F41B7 /* Kelnero.xcdatamodeld in Sources */,
+                7B4153A720FDEA20003EC57E /* OrderRow.swift in Sources */,
+                7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */,
+                3395E79120FF858B0021410C /* MyTabBarOwner.swift in Sources */,
+                7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */,
+                33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */,
+                3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */,
+                3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */,
+                7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,
+                7B4153AD20FDEA65003EC57E /* RestaurantModel.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7BEA935720F79A58009F41B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BEA935820F79A58009F41B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BEA936020F79A59009F41B7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
+        7BEA935720F79A58009F41B7 /* Main.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                7BEA935820F79A58009F41B7 /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
+        7BEA935F20F79A59009F41B7 /* LaunchScreen.storyboard */ = {
+            isa = PBXVariantGroup;
+            children = (
+                7BEA936020F79A59009F41B7 /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7BEA936320F79A59009F41B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		7BEA936420F79A59009F41B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7BEA936620F79A59009F41B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Kelnero/Kelnero.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = K8WJKQA676;
-				INFOPLIST_FILE = Kelnero/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.iosfoundation.Kelnero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "71ecc571-3e3f-4b8b-9a54-309d8bacef25";
-				PROVISIONING_PROFILE_SPECIFIER = kelnero;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7BEA936720F79A59009F41B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Kelnero/Kelnero.entitlements;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = K8WJKQA676;
-				INFOPLIST_FILE = Kelnero/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = it.unisa.iosfoundation.Kelnero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "71ecc571-3e3f-4b8b-9a54-309d8bacef25";
-				PROVISIONING_PROFILE_SPECIFIER = kelnero;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
+        7BEA936320F79A59009F41B7 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_ENABLE_OBJC_WEAK = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+                MTL_ENABLE_DEBUG_INFO = YES;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            };
+            name = Debug;
+        };
+        7BEA936420F79A59009F41B7 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_ANALYZER_NONNULL = YES;
+                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_ENABLE_OBJC_WEAK = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                CODE_SIGN_IDENTITY = "iPhone Developer";
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_NS_ASSERTIONS = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu11;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+                MTL_ENABLE_DEBUG_INFO = NO;
+                SDKROOT = iphoneos;
+                SWIFT_COMPILATION_MODE = wholemodule;
+                SWIFT_OPTIMIZATION_LEVEL = "-O";
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        7BEA936620F79A59009F41B7 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_ENTITLEMENTS = Kelnero/Kelnero.entitlements;
+                CODE_SIGN_STYLE = Manual;
+                DEVELOPMENT_TEAM = K8WJKQA676;
+                INFOPLIST_FILE = Kelnero/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = it.unisa.iosfoundation.Kelnero;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PROVISIONING_PROFILE = "71ecc571-3e3f-4b8b-9a54-309d8bacef25";
+                PROVISIONING_PROFILE_SPECIFIER = kelnero;
+                SWIFT_VERSION = 4.0;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        7BEA936720F79A59009F41B7 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+                CODE_SIGN_ENTITLEMENTS = Kelnero/Kelnero.entitlements;
+                CODE_SIGN_STYLE = Manual;
+                DEVELOPMENT_TEAM = K8WJKQA676;
+                INFOPLIST_FILE = Kelnero/Info.plist;
+                LD_RUNPATH_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "@executable_path/Frameworks",
+                );
+                PRODUCT_BUNDLE_IDENTIFIER = it.unisa.iosfoundation.Kelnero;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PROVISIONING_PROFILE = "71ecc571-3e3f-4b8b-9a54-309d8bacef25";
+                PROVISIONING_PROFILE_SPECIFIER = kelnero;
+                SWIFT_VERSION = 4.0;
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7BEA934B20F79A58009F41B7 /* Build configuration list for PBXProject "Kelnero" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BEA936320F79A59009F41B7 /* Debug */,
-				7BEA936420F79A59009F41B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BEA936520F79A59009F41B7 /* Build configuration list for PBXNativeTarget "Kelnero" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BEA936620F79A59009F41B7 /* Debug */,
-				7BEA936720F79A59009F41B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+        7BEA934B20F79A58009F41B7 /* Build configuration list for PBXProject "Kelnero" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                7BEA936320F79A59009F41B7 /* Debug */,
+                7BEA936420F79A59009F41B7 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        7BEA936520F79A59009F41B7 /* Build configuration list for PBXNativeTarget "Kelnero" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                7BEA936620F79A59009F41B7 /* Debug */,
+                7BEA936720F79A59009F41B7 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */,
-			);
-			currentVersion = 7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */;
-			path = Kelnero.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
+        7BEA935A20F79A58009F41B7 /* Kelnero.xcdatamodeld */ = {
+            isa = XCVersionGroup;
+            children = (
+                7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */,
+            );
+            currentVersion = 7BEA935B20F79A58009F41B7 /* Kelnero.xcdatamodel */;
+            path = Kelnero.xcdatamodeld;
+            sourceTree = "<group>";
+            versionGroupType = wrapper.xcdatamodel;
+        };
 /* End XCVersionGroup section */
-	};
-	rootObject = 7BEA934820F79A58009F41B7 /* Project object */;
+    };
+    rootObject = 7BEA934820F79A58009F41B7 /* Project object */;
 }
