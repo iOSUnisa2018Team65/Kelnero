@@ -10,6 +10,15 @@ import UIKit
 
 var orders = [OrderRow]()
 
+public extension UIView {
+    public func round() {
+        let width = bounds.width < bounds.height ? bounds.width : bounds.height
+        let mask = CAShapeLayer()
+        mask.path = UIBezierPath(ovalIn: CGRect(x: bounds.midX - width / 2,y: bounds.midY - width / 2, width: width, height: width)).cgPath
+        self.layer.mask = mask
+    }
+}
+    
 class OrdersCustomerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
@@ -58,13 +67,23 @@ class OrdersCustomerTableViewController: UITableViewController {
         return orders.count
     }
     
-    
+
+        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
         
-        cell.imageView?.image = orders[indexPath.row].dish.photo
+       
         cell.detailTextLabel?.text = String(orders[indexPath.row].quantity)
         cell.textLabel?.text = orders[indexPath.row].dish.name
+        
+        let image: UIImage = orders[indexPath.row].dish.photo
+        cell.imageView?.image = image
+        
+        /* makes the image round
+        cell.imageView?.layer.cornerRadius = (cell.imageView?.bounds.height)! / 2
+        cell.imageView?.clipsToBounds = true
+        cell.imageView?.contentMode = .scaleAspectFill
+         */
         
         return cell
     }
@@ -87,7 +106,7 @@ class OrdersCustomerTableViewController: UITableViewController {
      }
      */
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120.0
+        return 70
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

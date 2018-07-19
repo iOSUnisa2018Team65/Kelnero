@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */; };
 		3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591D2100886900577185 /* DetailMenuViewController.swift */; };
+		332459202100D18300577185 /* MenuOwnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591F2100D18300577185 /* MenuOwnerController.swift */; };
 		3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
 		3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
 		3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomerDetail.swift; sourceTree = "<group>"; };
 		3324591D2100886900577185 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
+		3324591F2100D18300577185 /* MenuOwnerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOwnerController.swift; sourceTree = "<group>"; };
 		3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
 		3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
 		3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
 				3395E79020FF858B0021410C /* MyTabBarOwner.swift */,
+				3324591F2100D18300577185 /* MenuOwnerController.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				3395E79120FF858B0021410C /* MyTabBarOwner.swift in Sources */,
 				7B4153A320FDE9E2003EC57E /* Dish.swift in Sources */,
 				33F3EAFE20F8DB5C0005186C /* QrCodeViewController.swift in Sources */,
+				332459202100D18300577185 /* MenuOwnerController.swift in Sources */,
 				3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */,
 				3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */,
 				7BEA935420F79A58009F41B7 /* AppDelegate.swift in Sources */,

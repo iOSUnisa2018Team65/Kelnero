@@ -16,8 +16,16 @@ class OrderCustomerDetail: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageDish: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var quantityLabel: UILabel!
     
+    @IBOutlet weak var stepper: UIStepper!
+    
+    @IBAction func stepperAction(_ sender: UIStepper) {
+        quantityLabel.text = Int(sender.value).description
+        order?.quantity = Int(quantityLabel.text!)!
+
+    }
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     @IBAction func deleteDishFromOrder(_ sender: Any) {
         orders.remove(at: orderIdx!)
         //da implementare icloud
@@ -31,6 +39,21 @@ class OrderCustomerDetail: UIViewController {
         imageDish.image = order?.dish.photo
         descriptionLabel.text = order?.dish.descr
         quantityLabel.text = order?.quantity.description
+        stepper.autorepeat = true
+        stepper.maximumValue = 10
+        stepper.minimumValue = 1
+        stepper.value = Double((order?.quantity)!)
+        switch order?.state{
+        case 1:
+            statusLabel.text = "Order Status: In queue"
+        case 2:
+            statusLabel.text = "Order Status: Making"
+        case 3:
+            statusLabel.text = "Order Status: Delivered"
+        default:
+            statusLabel.text = "Order Status:"
+        }
+       
         
         // Do any additional setup after loading the view.
     }

@@ -46,6 +46,36 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        activityIndicator.hidesWhenStopped = true
+//        
+//        if menu.isEmpty {
+//            activityIndicator.startAnimating()
+//        }
+//        
+//        DishModel.getAllDishesByRestaurantId(restaurantId: "46da4a3ab2106811eecd8e73ea204468") {
+//            (menu2, error) in
+//            if let e = error {
+//                print(e)
+//            }
+//            else {
+//                menu = menu2
+//                DispatchQueue.main.async { //reloads when menu is fetched
+//                    self.collectionView?.reloadData()
+//                    self.activityIndicator.stopAnimating()
+//                }
+//            }
+//        }
+//        
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Register cell classes
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
+        // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
         activityIndicator.hidesWhenStopped = true
         
         if menu.isEmpty {
@@ -65,17 +95,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
                 }
             }
         }
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -114,16 +134,18 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
 //
 //        return returnValue
     }
+    
+   
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! MenuCustomerCollectionViewCell
 
         cell.textLabel.text = "\(menu[indexPath.section][indexPath.row].name)"
         cell.image.image = menu[indexPath.section][indexPath.row].photo
-
+        
         return cell
     }
-    
+  
     // change background color when user touches cell
     override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
