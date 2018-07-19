@@ -36,10 +36,20 @@ class MenuOwnerController: UITableViewController {
                 sections.append(order.table)
             }
         }
-        print(sections.count)
         return sections.count
     }
-
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var sections: [Int] = []
+        
+        for order in orders{
+            if sections.contains(order.table){
+            }else{
+                sections.append(order.table)
+            }
+    }
+        let title = "Table: \(sections[section].description)"
+        return title
+}
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return orders.count
@@ -56,7 +66,15 @@ class MenuOwnerController: UITableViewController {
         return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "menuCustomer"{
+            let currentidx = tableView.indexPathForSelectedRow?.row
+            let vc = segue.destination as! OrderDetailOwnerController
+            vc.orderDetail = orders[currentidx!].dish
+            vc.quantity = orders[currentidx!].quantity
+            vc.table = orders[currentidx!].table
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -18,6 +18,7 @@
 		33F3EB0020F8DC580005186C /* welcomeCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */; };
 		33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */; };
 		33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3EB0520FC9F440005186C /* MyTabBar.swift */; };
+		33FFBFF62100FBBD00F0EA79 /* OrderDetailOwnerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FFBFF52100FBBD00F0EA79 /* OrderDetailOwnerController.swift */; };
 		7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */; };
 		7B41539F20FDE93C003EC57E /* IcloudUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B41539E20FDE93C003EC57E /* IcloudUtils.swift */; };
 		7B4153A120FDE97B003EC57E /* QrCodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */; };
@@ -50,6 +51,7 @@
 		33F3EAFF20F8DC580005186C /* welcomeCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCustomerViewController.swift; sourceTree = "<group>"; };
 		33F3EB0320F8E3000005186C /* orderCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderCustomerViewController.swift; sourceTree = "<group>"; };
 		33F3EB0520FC9F440005186C /* MyTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBar.swift; sourceTree = "<group>"; };
+		33FFBFF52100FBBD00F0EA79 /* OrderDetailOwnerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailOwnerController.swift; sourceTree = "<group>"; };
 		7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDishOwnerViewController.swift; sourceTree = "<group>"; };
 		7B41539E20FDE93C003EC57E /* IcloudUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcloudUtils.swift; sourceTree = "<group>"; };
 		7B4153A020FDE97B003EC57E /* QrCodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeUtils.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				7B41539C20FDE4AB003EC57E /* AddDishOwnerViewController.swift */,
 				3395E79020FF858B0021410C /* MyTabBarOwner.swift */,
 				3324591F2100D18300577185 /* MenuOwnerController.swift */,
+				33FFBFF52100FBBD00F0EA79 /* OrderDetailOwnerController.swift */,
 			);
 			path = Owner;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */,
 				3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
 				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
+				33FFBFF62100FBBD00F0EA79 /* OrderDetailOwnerController.swift in Sources */,
 				3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */,
 				3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */,
 				7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */,
