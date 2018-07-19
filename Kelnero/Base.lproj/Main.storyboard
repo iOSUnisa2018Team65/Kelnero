@@ -162,9 +162,9 @@ myTextView.layer.cornerRadius = 5.0; </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hw3-YC-ju5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6218" y="-2065"/>
+            <point key="canvasLocation" x="6505" y="-2292"/>
         </scene>
-        <!--Add Dish Owner View Controller-->
+        <!--Add Dish-->
         <scene sceneID="dnw-Nx-J89">
             <objects>
                 <viewController id="BDA-LP-MB6" customClass="AddDishOwnerViewController" customModule="Kelnero" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,68 +172,68 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-n4-OiS">
-                                <rect key="frame" x="67" y="88" width="230" height="230"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fpo-4e-lXi" appends="YES" id="zrJ-sp-mDm"/>
-                                </connections>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-ax-BHU">
-                                <rect key="frame" x="139" y="336" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sEd-ax-BHU">
+                                <rect key="frame" x="72" y="344" width="230" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2.5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYe-VF-xx9">
-                                <rect key="frame" x="134" y="390" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nYe-VF-xx9">
+                                <rect key="frame" x="72" y="556" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Dessert" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFC-X0-9S9">
-                                <rect key="frame" x="134" y="440" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descrizione fantastica" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-UT-Fic">
-                                <rect key="frame" x="67" y="488" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alW-r7-f5P">
-                                <rect key="frame" x="170" y="36" width="34" height="30"/>
+                                <rect key="frame" x="268" y="556" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="BDA-LP-MB6" eventType="touchUpInside" id="GW5-ru-spv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNr-dj-6Az">
-                                <rect key="frame" x="300" y="366" width="39" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFC-X0-9S9">
+                                <rect key="frame" x="72" y="382" width="230" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prova"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JOG-6p-LwV">
+                                <rect key="frame" x="72" y="420" width="230" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XaU-2G-oj9">
+                                <rect key="frame" x="275" y="556" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-n4-OiS">
+                                <rect key="frame" x="72" y="96" width="230" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="prova:" destination="BDA-LP-MB6" eventType="touchUpInside" id="Mmf-fT-Rna"/>
+                                    <outletCollection property="gestureRecognizers" destination="fpo-4e-lXi" appends="YES" id="zrJ-sp-mDm"/>
                                 </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="14W-BK-l72"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Dish" id="zPO-83-AfD"/>
                     <connections>
                         <outlet property="categoryField" destination="XFC-X0-9S9" id="vOz-I7-kWg"/>
-                        <outlet property="descriptionField" destination="BtE-UT-Fic" id="x3B-fG-HEE"/>
+                        <outlet property="descriptionField" destination="JOG-6p-LwV" id="bEz-eP-P1h"/>
                         <outlet property="imageView" destination="fzn-n4-OiS" id="476-LT-OXG"/>
                         <outlet property="nameField" destination="sEd-ax-BHU" id="gmh-52-40G"/>
                         <outlet property="priceField" destination="nYe-VF-xx9" id="gi5-fn-VJh"/>
+                        <outlet property="saveButton" destination="alW-r7-f5P" id="CI8-uG-8Xe"/>
+                        <outlet property="spinner" destination="XaU-2G-oj9" id="FOC-GU-dVX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8T-wo-jW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,12 +243,11 @@ myTextView.layer.cornerRadius = 5.0; </string>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="7189.6000000000004" y="-1442.4287856071965"/>
+            <point key="canvasLocation" x="6862" y="-1442"/>
         </scene>
         <!--Settings Owner Nav Controller-->
         <scene sceneID="CAN-GL-alW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xrQ-5e-61a" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Settings Owner Nav Controller" id="kKK-IR-DnA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="tgB-Zx-V6s"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JC6-zh-Iee">
@@ -259,6 +258,7 @@ myTextView.layer.cornerRadius = 5.0; </string>
                         <segue destination="Kx4-a7-qGJ" kind="relationship" relationship="rootViewController" id="4pA-hm-OUF"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrQ-5e-61a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4510" y="-107"/>
         </scene>
@@ -318,16 +318,19 @@ myTextView.layer.cornerRadius = 5.0; </string>
         <!--Menu Owner Nav Controller-->
         <scene sceneID="6y4-fc-PL6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zT-Q1-3nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Menu Owner Nav Controller" id="miX-cb-og8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" id="Abf-VK-cuY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S2H-Sq-54v">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="BDA-LP-MB6" kind="relationship" relationship="rootViewController" id="bmT-Da-wQB"/>
+                    </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0zT-Q1-3nz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4510" y="-1441"/>
+            <point key="canvasLocation" x="4510" y="-1442"/>
         </scene>
         <!--Orders Owner Nav Controller-->
         <scene sceneID="hXl-4t-6kU">
@@ -818,8 +821,5 @@ myTextView.layer.cornerRadius = 5.0; </string>
         <image name="menu" width="20" height="20"/>
         <image name="order" width="20" height="20"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="esM-Ge-JHg"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
