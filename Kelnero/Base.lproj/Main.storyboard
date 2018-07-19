@@ -25,9 +25,16 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" width="94" id="nPE-ls-Iom">
+                                    <barButtonItem title="OwnerSide" width="94" id="nPE-ls-Iom">
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="22m-Fa-VCe" kind="show" id="XGM-v6-4zt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="DebugCustomer" id="s6U-rc-Dxm">
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="J1s-ji-Ehe" kind="presentation" identifier="debugSegue" id="25U-ve-Oxc"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -538,7 +545,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-O0-ef7">
                                 <rect key="frame" x="271" y="104" width="64" height="30"/>
-                                <state key="normal" title="&lt;Delete&gt;"/>
+                                <state key="normal" title="&lt;Delete&gt;">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="deleteDishFromOrder:" destination="rA5-Xa-f5J" eventType="touchUpInside" id="Nqj-MZ-nsr"/>
                                 </connections>
@@ -567,6 +576,9 @@
                                 <state key="normal" title="Add to order">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToOrderButton:" destination="6rO-KE-Am0" eventType="touchUpInside" id="BDJ-Lc-Yt1"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-oO-8hq">
                                 <rect key="frame" x="56.5" y="492.5" width="262.5" height="29"/>
@@ -590,24 +602,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBI-cZ-mXv">
-                                <rect key="frame" x="56" y="565" width="262.5" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add to order">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addToOrderButton:" destination="6rO-KE-Am0" eventType="touchUpInside" id="p3n-n4-iiY"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7G-lf-SKq">
-                                <rect key="frame" x="56" y="565" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -631,9 +625,11 @@
                         <viewLayoutGuide key="safeArea" id="Fyw-9w-I2O"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="Qa2-UA-CLH" id="DIY-Op-BcK"/>
                         <outlet property="imageDish" destination="gTH-ec-sxy" id="4Jf-8V-Ill"/>
                         <outlet property="nameLabel" destination="4cK-sd-mqY" id="AC5-a1-nXg"/>
                         <outlet property="quantityLabel" destination="dfn-Ea-rq6" id="MPu-VX-TmR"/>
+                        <outlet property="stepper" destination="qgn-bw-sLW" id="GNI-VR-z4Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJ4-l4-DIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -920,5 +916,8 @@
         <image name="order" width="20" height="20"/>
         <image name="setting" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="25U-ve-Oxc"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

@@ -163,6 +163,12 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             vc.qrCode = codeFinal
             print(codeFinal)
             
+        }else
+            if (segue.identifier == "debugSegue"){
+                let tvc = segue.destination as! MyTabBar
+                let navc = tvc.viewControllers!.first as! UINavigationController
+                let vc = navc.viewControllers.first as! welcomeCustomerViewController
+                vc.qrCode = "46da4a3ab2106811eecd8e73ea204468_2"
         }
  
                     
