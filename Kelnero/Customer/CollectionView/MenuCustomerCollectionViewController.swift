@@ -19,8 +19,18 @@ let tiramisu = Dish(restaurant: restaurant, name: "Tiramisù", price: 8, descrip
 
 var primiPiatti = [Dish]()
 var desserts = [Dish]()
+//var menu = [
+//    primiPiatti,
+//    desserts
+//]
 
 var menu = [[Dish]]()
+
+
+
+
+
+//var menu = [[Dish]]()
 //var menu = [
 //    primiPiatti,
 //    desserts
@@ -29,19 +39,16 @@ var menu = [[Dish]]()
 
 class MenuCustomerCollectionViewController: UICollectionViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        primiPiatti.append(carbonara)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza)
-        primiPiatti.append(pizza) //pizza is good
-
+        activityIndicator.hidesWhenStopped = true
         
-        desserts.append(tiramisu)
-
+        if menu.isEmpty {
+            activityIndicator.startAnimating()
+        }
         
         DishModel.getAllDishesByRestaurantId(restaurantId: "46da4a3ab2106811eecd8e73ea204468") {
             (menu2, error) in
@@ -50,8 +57,13 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
             }
             else {
                 menu = menu2
+                DispatchQueue.main.async { //reloads when menu is fetched
+                    self.collectionView?.reloadData()
+                    self.activityIndicator.stopAnimating()
+                }
             }
         }
+
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -87,18 +99,18 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        var returnValue = Int()
-        
-        if section == 0 {
-            returnValue = primiPiatti.count
-            
-        } else if section == 1 {
-            returnValue = desserts.count
-            
-        }
-        
-        return returnValue
+        return menu[section].count
+//        var returnValue = Int()
+//
+//        if section == 0 {
+//            returnValue = primiPiatti.count
+//
+//        } else if section == 1 {
+//            returnValue = desserts.count
+//
+//        }
+//
+//        return returnValue
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
