@@ -100,7 +100,8 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                 return
             }
             else {
-                let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, category: category!, description: description!, photo: image!)
+                
+                let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, category: category!, description: description!, photo: #imageLiteral(resourceName: "imageDefault"))
                 
                 DishModel.addNew(dish: newDish) {
                     (dish, error) in

@@ -53,6 +53,8 @@ class DetailMenuViewController: UIViewController {
         nameLabel.text = dishDetail?.name
         descriptionLabel.text = dishDetail?.descr
         stepper.value = 1
+        descriptionLabel.minimumScaleFactor = 10/UIFont.labelFontSize
+        descriptionLabel.adjustsFontSizeToFitWidth = true
 
         // Do any additional setup after loading the view.
     }
