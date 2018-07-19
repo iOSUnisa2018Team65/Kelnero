@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+var orders = [OrderRow]()
+let pizzaorder = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 2)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
