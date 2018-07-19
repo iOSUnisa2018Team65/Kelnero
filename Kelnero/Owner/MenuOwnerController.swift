@@ -36,7 +36,7 @@ class MenuOwnerController: UITableViewController {
                 sections.append(order.table)
             }
         }
-        
+        print(sections.count)
         return sections.count
     }
 
