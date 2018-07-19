@@ -94,6 +94,68 @@ class OrderRowModel: NSObject {
             }
         }
     }
+    
+    
+    
+    class func getAllOrderRows(restaurantId restId: String, completionHandler handler: @escaping ([[OrderRow]], Error?) -> (Void)) {
+        var orders = [[OrderRow]]()
+        var tables = [Int]()
+        var whereClause:NSPredicate = NSPredicate(format: "%K == %@", restaurantIdField, restId)
+        var query = CKQuery(recordType: recordType, predicate: whereClause)
+        var rest: Restaurant? = nil
+        RestaurantModel.getById(idToSearch: restId) {
+            (r, error) in
+            if let e = error {
+                handler(orders, e)
+                return
+            }
+            else {
+                rest = r!
+                
+                let container = CKContainer.default()
+                let db = container.publicCloudDatabase
+                
+                db.perform(query, inZoneWith: nil) {
+                    (records, error) in
+                    if let e = error {
+                        handler(orders, e)
+                    }
+                    else {
+                        records?.forEach() { fetchedRecord in
+                            var table = fetchedRecord[tableField] as! Int
+                            var quantity = fetchedRecord[quantityField] as! Int
+                            var state = fetchedRecord[stateField] as! Int
+                            var dishName = fetchedRecord[dishField] as! String
+                            DishModel.getDishByName(restaurantId: restId, dishName: dishName) {
+                                (d, error) in
+                                if let e = error {
+                                    print(e)
+                                }
+                                else {
+                                    var order = OrderRow(restaurant: rest!, table: table, dish: d!, quantity: quantity, state: state)
+                                    if tables.contains(table) {
+                                        var i = tables.index(of: table)!
+                                        orders[i].append(order)
+                                    }
+                                    else {
+                                        tables.append(table)
+                                        orders.append([OrderRow]())
+                                        var i = tables.index(of: table)!
+                                        orders[i].append(order)
+                                    }
+                                print("Retrieved order for dish \(order.dish.name) in table \(order.table)")
+                                    print(orders)
+                                }
+                            }
+
+                        }
+                        print("Calling handler")
+                        handler(orders, nil)
+                    }
+                }
+            }
+        }
+    }
 
     
 }

@@ -19,6 +19,8 @@ class MenuCustomerCollectionViewCell: UICollectionViewCell {
       
         self.layer.cornerRadius = 3
         
+        textLabel.adjustsFontSizeToFitWidth = true
+        textLabel.numberOfLines = 2
         
         
 }

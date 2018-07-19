@@ -103,6 +103,17 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                     if let e = error {
                         print("Error in saving new dish \(dish.name)):")
                         print(e)
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Error", message: "Failed to save \(dish.name)", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Retry", style: .default) {
+                                (alertAction) in
+                                self.saveButtonPressed(sender)
+                            })
+                            self.present(alert, animated: true)
+                            
+                            self.spinner.stopAnimating()
+                            self.saveButton.isEnabled = true
+                        }
                     }
                     else {
                         print("Dish \(dish.name) successfully saved.")
