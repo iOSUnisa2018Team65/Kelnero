@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3324591C20FF9DA500577185 /* OrderCustomerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */; };
+		3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3324591D2100886900577185 /* DetailMenuViewController.swift */; };
 		3395E78820FF2DBE0021410C /* MenuCustomerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */; };
 		3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */; };
 		3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		3324591B20FF9DA500577185 /* OrderCustomerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomerDetail.swift; sourceTree = "<group>"; };
+		3324591D2100886900577185 /* DetailMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuViewController.swift; sourceTree = "<group>"; };
 		3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewController.swift; sourceTree = "<group>"; };
 		3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCustomerCollectionViewCell.swift; sourceTree = "<group>"; };
 		3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				3395E78720FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift */,
 				3395E78620FF2DBE0021410C /* MenuCustomerCollectionViewController.swift */,
+				3324591D2100886900577185 /* DetailMenuViewController.swift */,
 				3395E78A20FF3ABA0021410C /* SectionHeaderView.swift */,
 			);
 			path = CollectionView;
@@ -260,6 +263,7 @@
 				FA25B38120FF673C00CC6730 /* OrdersCustomerTableViewController.swift in Sources */,
 				3395E78920FF2DBE0021410C /* MenuCustomerCollectionViewCell.swift in Sources */,
 				33F3EB0420F8E3000005186C /* orderCustomerViewController.swift in Sources */,
+				3324591E2100886900577185 /* DetailMenuViewController.swift in Sources */,
 				3395E78B20FF3ABA0021410C /* SectionHeaderView.swift in Sources */,
 				7B41539D20FDE4AB003EC57E /* AddDishOwnerViewController.swift in Sources */,
 				33F3EB0620FC9F440005186C /* MyTabBar.swift in Sources */,

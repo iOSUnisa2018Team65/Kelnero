@@ -41,6 +41,8 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var objectSelected: Dish?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,7 +65,7 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
                 }
             }
         }
-
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -125,13 +127,15 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
     // change background color when user touches cell
     override func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.red
+        objectSelected = menu[indexPath.section][indexPath.row]
+        cell?.layer.borderWidth = 3
+        cell?.layer.borderColor = UIColor.red.cgColor
     }
     
     // change background color back when user releases touch
     override func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.darkGray
+        cell?.layer.borderWidth = 0
     }
     
    //sezioni
@@ -143,6 +147,14 @@ class MenuCustomerCollectionViewController: UICollectionViewController {
         
         return sectionHeaderView
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailSegue"{
+            
+            let detail = segue.destination as! DetailMenuViewController
+            detail.dishDetail = objectSelected
+        }
     }
     // MARK: UICollectionViewDelegate
 
