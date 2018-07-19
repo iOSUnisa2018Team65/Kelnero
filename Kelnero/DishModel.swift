@@ -49,6 +49,7 @@ class DishModel: NSObject {
          let asset = CKAsset(fileURL: targetURL)
          record[photoField] = asset
          */
+
         record[photoField] = UIImageJPEGRepresentation(dishToAdd.photo, 0.5)! as NSData
         
         // saving
@@ -96,6 +97,7 @@ class DishModel: NSObject {
                          var img = NSData(contentsOf: assetUrl)
                          var photo = UIImage(data: img as! Data)!
                          */
+
                         var photo = UIImage(data: (fetchedRecord[photoField] as! NSData) as Data)
                         var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo!)
                         handler(d, nil)
@@ -140,7 +142,9 @@ class DishModel: NSObject {
                             /*var asset = fetchedRecord[photoField] as! CKAsset
                              var assetUrl = asset.fileURL
                              var img = NSData(contentsOf: assetUrl)
-                             var photo = UIImage(data: img as! Data)!*/
+                             var photo = UIImage(data: img as! Data)!
+                             */
+
                             var d = Dish(restaurant: rest!, name: name, price: price, category: category, description: descr, photo: photo!)
                             if categories.contains(category) {
                                 var i = categories.index(of: category)!
