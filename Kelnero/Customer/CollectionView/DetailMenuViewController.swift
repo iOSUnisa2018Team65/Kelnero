@@ -16,8 +16,10 @@ class DetailMenuViewController: UIViewController {
     @IBOutlet weak var imageDish: UIImageView!
     
     @IBOutlet weak var quantityLabel: UILabel!
-    @IBAction func stepperQuantity(_ sender: Any) {
+    @IBAction func stepperQuantity(_ sender: UIStepper) {
+        quantityLabel.text = Int(sender.value).description
     }
+
     @IBAction func addToOrderButton(_ sender: Any) {
     }
     

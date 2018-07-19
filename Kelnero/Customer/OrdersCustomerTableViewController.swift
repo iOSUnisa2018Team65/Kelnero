@@ -8,23 +8,26 @@
 
 import UIKit
 
+var orders = [OrderRow]()
+
 class OrdersCustomerTableViewController: UITableViewController {
-    
-    
-    var orders = [OrderRow]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let pizzaorder = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 2)
+        orders.append(pizzaorder)
         
         OrderRowModel.getAllOrderRowsByTable(restaurantId: "46da4a3ab2106811eecd8e73ea204468", tableNumber: 2) {
             (ordersList, error) in
                 if let e = error {
 //                    gestisci errore
-                    
                 }
                 else {
-                    self.orders = ordersList
-                    print(self.orders)
+                    orders = ordersList
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
                   
                 }
             
@@ -50,7 +53,7 @@ class OrdersCustomerTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return orders.count
     }
     
