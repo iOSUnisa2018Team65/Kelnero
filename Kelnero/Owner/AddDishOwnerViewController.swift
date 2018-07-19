@@ -18,8 +18,16 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     
+    var qrCode: String = ""
     var image: UIImage!
     var ownerId = "46da4a3ab2106811eecd8e73ea204468"
+    
+    @IBAction func backToQrOwner(_ sender: Any) {
+        DispatchQueue.main.async{
+            self.dismiss(animated: false, completion: {})
+            self.performSegue(withIdentifier: "backToQrOwner", sender: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

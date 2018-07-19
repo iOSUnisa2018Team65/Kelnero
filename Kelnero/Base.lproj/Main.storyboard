@@ -194,6 +194,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back to qr"/>
                             </button>
+                            <connections>
+                                <action selector="bakToQr:" destination="BDA-LP-MB6" id="K5I-Ci-ZXA"/>
+                                <segue destination="xiO-Di-sYf" kind="presentation" identifier="backToQrOwner" id="LO3-uG-xY9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -919,6 +923,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="25U-ve-Oxc"/>
+        <segue reference="LO3-uG-xY9"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
