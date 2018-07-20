@@ -10,9 +10,21 @@ import UIKit
 
 class MenuOwnerController: UITableViewController {
 
+    var sections = [Int]()
+    
+    func numberOfTables() {
+        sections = []
+        for order in orders{
+            if sections.contains(order.table){
+            }else{
+                sections.append(order.table)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        numberOfTables()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,53 +40,70 @@ class MenuOwnerController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        var sections: [Int] = []
+       // var sections: [Int] = []
+//        sections = []
         
-        for order in orders{
-            if sections.contains(order.table){
-            }else{
-                sections.append(order.table)
-            }
-        }
+//        for order in orders{
+//            if sections.contains(order.table){
+//            }else{
+//                sections.append(order.table)
+//            }
+//        }
+        numberOfTables()
         return sections.count
     }
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var sections: [Int] = []
-        
-        for order in orders{
-            if sections.contains(order.table){
-            }else{
-                sections.append(order.table)
-            }
-    }
+        //var sections: [Int] = []
+//        sections = []
+//        for order in orders{
+//            if sections.contains(order.table){
+//            }else{
+//                sections.append(order.table)
+//            }
+//    }
+        numberOfTables()
         let title = "Table: \(sections[section].description)"
         return title
 }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return orders.count
+        var t = sections[section]
+        var o = orders.filter() {
+            $0.table == t
+        }
+        return o.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ownerCell", for: indexPath)
-
-        cell.imageView?.image = orders[indexPath.row].dish.photo
-        cell.detailTextLabel?.text = String(orders[indexPath.row].quantity)
-        cell.textLabel?.text = orders[indexPath.row].dish.name
+        var t = sections[indexPath.section]
+        var o = orders.filter() {
+            $0.table == t
+        }
+        cell.imageView?.image = o[indexPath.row].dish.photo
+        cell.detailTextLabel?.text = String(o[indexPath.row].quantity)
+        cell.textLabel?.text = o[indexPath.row].dish.name
         
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuCustomer"{
+            var t = sections[(tableView.indexPathForSelectedRow?.section)!]
+            var o = orders.filter() {
+                $0.table == t
+            }
             let currentidx = tableView.indexPathForSelectedRow?.row
             let vc = segue.destination as! OrderDetailOwnerController
-            vc.orderDetail = orders[currentidx!].dish
-            vc.quantity = orders[currentidx!].quantity
-            vc.table = orders[currentidx!].table
+            vc.orderDetail = o[currentidx!].dish
+            vc.quantity = o[currentidx!].quantity
+            vc.table = o[currentidx!].table
         }
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
