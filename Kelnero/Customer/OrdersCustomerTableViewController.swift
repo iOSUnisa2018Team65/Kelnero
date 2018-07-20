@@ -71,7 +71,7 @@ class OrdersCustomerTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.isEditing = false
-        
+        refreshButton(self)
         tableView.reloadData()
         
     }

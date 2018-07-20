@@ -110,7 +110,9 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                 var newImage = #imageLiteral(resourceName: "imageDefault")
                 
                 if self.imageView.image != nil {
-                    newImage = self.imageView.image!
+                    DispatchQueue.main.async {
+                        newImage = self.imageView.image!
+                    }
                 }
                 
                 let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, category: category!, description: description!, photo: newImage)
