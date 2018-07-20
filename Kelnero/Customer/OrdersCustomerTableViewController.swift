@@ -21,6 +21,14 @@ public extension UIView {
     
 class OrdersCustomerTableViewController: UITableViewController {
     
+    var o: [OrderRow]?
+    
+    func filterRows() {
+        o = orders.filter() {
+            $0.table == 2
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          /* Da fixare il fetch 
@@ -60,8 +68,8 @@ class OrdersCustomerTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return orders.count
+        filterRows()
+        return o!.count
     }
     
 
@@ -69,11 +77,12 @@ class OrdersCustomerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
         
+        filterRows()
        
-        cell.detailTextLabel?.text = String(orders[indexPath.row].quantity)
-        cell.textLabel?.text = orders[indexPath.row].dish.name
+        cell.detailTextLabel?.text = String(o![indexPath.row].quantity)
+        cell.textLabel?.text = o![indexPath.row].dish.name
         
-        let image: UIImage = orders[indexPath.row].dish.photo
+        let image: UIImage = o![indexPath.row].dish.photo
         cell.imageView?.image = image
         
         /* makes the image round
@@ -112,7 +121,8 @@ class OrdersCustomerTableViewController: UITableViewController {
         case "showOrder"?:
             let currentidx = tableView.indexPathForSelectedRow?.row
             let order = segue.destination as! OrderCustomerDetail
-            order.order = orders[currentidx!]
+            filterRows()
+            order.order = o?[currentidx!]
             order.orderIdx = currentidx
         default:
             preconditionFailure("Invalid segue identifier.")
