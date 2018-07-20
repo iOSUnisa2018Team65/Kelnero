@@ -120,13 +120,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alW-r7-f5P">
-                                <rect key="frame" x="268" y="538" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonPressed:" destination="BDA-LP-MB6" eventType="touchUpInside" id="GW5-ru-spv"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XFC-X0-9S9">
                                 <rect key="frame" x="126" y="380" width="208" height="30"/>
                                 <nil key="textColor"/>
@@ -177,26 +170,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alW-r7-f5P">
+                                <rect key="frame" x="275" y="550" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="BDA-LP-MB6" eventType="touchUpInside" id="GW5-ru-spv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JOG-6p-LwV" firstAttribute="leading" secondItem="14W-BK-l72" secondAttribute="leading" constant="40" id="3KY-e2-75W"/>
                             <constraint firstItem="fzn-n4-OiS" firstAttribute="top" secondItem="14W-BK-l72" secondAttribute="top" constant="25" id="4bH-sC-ANg"/>
-                            <constraint firstItem="alW-r7-f5P" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XJk-MI-f2U" secondAttribute="leading" constant="20" symbolic="YES" id="5N5-hR-Plk"/>
                             <constraint firstItem="p2g-Of-Elv" firstAttribute="leading" secondItem="14W-BK-l72" secondAttribute="leading" constant="40" id="5Qg-JK-zHP"/>
+                            <constraint firstItem="alW-r7-f5P" firstAttribute="leading" secondItem="nYe-VF-xx9" secondAttribute="trailing" constant="149" id="91X-Qw-VN2"/>
                             <constraint firstItem="XFC-X0-9S9" firstAttribute="top" secondItem="sEd-ax-BHU" secondAttribute="bottom" constant="8" id="CYZ-7B-qSu"/>
                             <constraint firstItem="PLY-cN-KYS" firstAttribute="leading" secondItem="14W-BK-l72" secondAttribute="leading" constant="40" id="GFK-y5-ujj"/>
                             <constraint firstItem="7PT-ad-mnU" firstAttribute="top" secondItem="p2g-Of-Elv" secondAttribute="bottom" constant="17" id="MHh-63-2aJ"/>
                             <constraint firstItem="14W-BK-l72" firstAttribute="bottom" secondItem="nYe-VF-xx9" secondAttribute="bottom" constant="37" id="MO9-0r-2Es"/>
                             <constraint firstItem="14W-BK-l72" firstAttribute="trailing" secondItem="XFC-X0-9S9" secondAttribute="trailing" constant="41" id="Mvg-7D-m5e"/>
                             <constraint firstItem="p2g-Of-Elv" firstAttribute="top" secondItem="fzn-n4-OiS" secondAttribute="bottom" constant="23" id="QJu-1C-h4s"/>
+                            <constraint firstItem="alW-r7-f5P" firstAttribute="top" secondItem="JOG-6p-LwV" secondAttribute="bottom" constant="25" id="Rz0-Oa-Gig"/>
                             <constraint firstItem="JOG-6p-LwV" firstAttribute="top" secondItem="PLY-cN-KYS" secondAttribute="bottom" constant="8" id="YAp-vd-Osl"/>
+                            <constraint firstItem="14W-BK-l72" firstAttribute="trailing" secondItem="alW-r7-f5P" secondAttribute="trailing" constant="66" id="ZK4-Cw-adR"/>
                             <constraint firstItem="PLY-cN-KYS" firstAttribute="top" secondItem="7PT-ad-mnU" secondAttribute="bottom" constant="18" id="cMT-RG-t0Y"/>
                             <constraint firstItem="14W-BK-l72" firstAttribute="trailing" secondItem="fzn-n4-OiS" secondAttribute="trailing" constant="73" id="cuD-s2-VGR"/>
                             <constraint firstItem="XFC-X0-9S9" firstAttribute="width" secondItem="XJk-MI-f2U" secondAttribute="width" multiplier="0.55" id="d0Y-8f-m7m"/>
                             <constraint firstItem="fzn-n4-OiS" firstAttribute="leading" secondItem="14W-BK-l72" secondAttribute="leading" constant="72" id="dNG-7r-YsW"/>
-                            <constraint firstItem="14W-BK-l72" firstAttribute="bottom" secondItem="alW-r7-f5P" secondAttribute="bottom" constant="50" id="e4e-eR-jJT"/>
-                            <constraint firstItem="14W-BK-l72" firstAttribute="trailing" secondItem="alW-r7-f5P" secondAttribute="trailing" constant="73" id="eVg-up-Mwy"/>
                             <constraint firstItem="sEd-ax-BHU" firstAttribute="top" secondItem="fzn-n4-OiS" secondAttribute="bottom" constant="23" id="f4G-4W-BRP"/>
                             <constraint firstItem="nYe-VF-xx9" firstAttribute="top" secondItem="JOG-6p-LwV" secondAttribute="bottom" constant="26" id="lXg-Sd-Sbx"/>
                             <constraint firstItem="nYe-VF-xx9" firstAttribute="leading" secondItem="14W-BK-l72" secondAttribute="leading" constant="72" id="lrA-fh-3zz"/>
@@ -206,7 +208,6 @@
                             <constraint firstItem="14W-BK-l72" firstAttribute="trailing" secondItem="sEd-ax-BHU" secondAttribute="trailing" constant="41" id="ukN-U6-HzG"/>
                             <constraint firstItem="14W-BK-l72" firstAttribute="bottom" secondItem="XaU-2G-oj9" secondAttribute="bottom" constant="42" id="v2S-gV-GPQ"/>
                             <constraint firstItem="7PT-ad-mnU" firstAttribute="leading" secondItem="14W-BK-l72" secondAttribute="leading" constant="40" id="yrS-Hc-ulC"/>
-                            <constraint firstItem="alW-r7-f5P" firstAttribute="top" secondItem="JOG-6p-LwV" secondAttribute="bottom" constant="13" id="zya-qD-ASo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="14W-BK-l72"/>
                     </view>
@@ -218,12 +219,13 @@
                                 <state key="normal" title="Back to qr"/>
                             </button>
                             <connections>
-                                <action selector="bakToQr:" destination="BDA-LP-MB6" id="K5I-Ci-ZXA"/>
+                                <action selector="backToQrOwner:" destination="BDA-LP-MB6" id="6ll-d7-cVj"/>
                                 <segue destination="xiO-Di-sYf" kind="presentation" identifier="backToQrOwner" id="LO3-uG-xY9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backToQrButton" destination="sF0-MI-Y77" id="SiC-u5-JNj"/>
                         <outlet property="categoryField" destination="XFC-X0-9S9" id="vOz-I7-kWg"/>
                         <outlet property="descriptionField" destination="JOG-6p-LwV" id="bEz-eP-P1h"/>
                         <outlet property="imageView" destination="fzn-n4-OiS" id="476-LT-OXG"/>
@@ -281,7 +283,9 @@
                                     <constraint firstAttribute="width" secondItem="aA0-r5-q9d" secondAttribute="height" multiplier="149:42" id="EGe-7N-Hx3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Generate QR"/>
+                                <state key="normal" title="Generate QR">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="generateQRButtonClicked:" destination="Kx4-a7-qGJ" eventType="touchUpInside" id="yac-yR-I1Y"/>
                                 </connections>
@@ -607,6 +611,7 @@
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qgn-bw-sLW">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="stepperQuantity:" destination="6rO-KE-Am0" eventType="valueChanged" id="iQ5-M8-HMx"/>
                                         </connections>
@@ -673,7 +678,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-bp-2QY">
                                 <rect key="frame" x="271" y="104" width="64" height="30"/>
-                                <state key="normal" title="&lt;Delete&gt;"/>
+                                <state key="normal" title="&lt;Delete&gt;">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="deleteDishFromOrder:" destination="rA5-Xa-f5J" eventType="touchUpInside" id="Gwg-T8-jIy"/>
                                 </connections>
@@ -701,6 +708,7 @@
                                 <subviews>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s5x-2y-1TY">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="stepperAction:" destination="rA5-Xa-f5J" eventType="valueChanged" id="lJR-We-v27"/>
                                             <action selector="stepperQuantity:" destination="6rO-KE-Am0" eventType="valueChanged" id="HFp-eF-rfH"/>

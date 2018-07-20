@@ -22,7 +22,10 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
     var image: UIImage!
     var ownerId = "46da4a3ab2106811eecd8e73ea204468"
     
+    @IBOutlet weak var backToQrButton: UIBarButtonItem!
+    
     @IBAction func backToQrOwner(_ sender: Any) {
+        
         DispatchQueue.main.async{
             self.dismiss(animated: false, completion: {})
             self.performSegue(withIdentifier: "backToQrOwner", sender: nil)
@@ -104,8 +107,13 @@ class AddDishOwnerViewController: UIViewController, UINavigationControllerDelega
                 return
             }
             else {
+                var newImage = #imageLiteral(resourceName: "imageDefault")
                 
-                let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, category: category!, description: description!, photo: #imageLiteral(resourceName: "imageDefault"))
+                if self.imageView.image != nil {
+                    newImage = self.imageView.image!
+                }
+                
+                let newDish = Dish(restaurant: fetchedRestaurant!, name: name!, price: price, category: category!, description: description!, photo: newImage)
                 
                 DishModel.addNew(dish: newDish) {
                     (dish, error) in

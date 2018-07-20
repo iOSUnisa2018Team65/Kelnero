@@ -23,8 +23,8 @@ class OrderDetailOwnerController: UIViewController {
         super.viewDidLoad()
         image.image = orderDetail?.photo
         nameLabel.text = orderDetail?.name
-        quantityLabel.text = "Quantity: \(quantity?.description)"
-        tableLabel.text = "Table: \(table?.description)"
+        quantityLabel.text = "Quantity: \(quantity?.description)!"
+        tableLabel.text = "Table: \(table?.description)!"
         
         
 

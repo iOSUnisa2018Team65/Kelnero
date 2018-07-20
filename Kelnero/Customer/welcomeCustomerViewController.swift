@@ -31,6 +31,11 @@ class welcomeCustomerViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
+        viewLoadSetup()
+    }
+
+    
+    func viewLoadSetup(){
         if qrCode == "" {
             restaurantNameLabel.text = "No qrcode"
         }else{
@@ -60,10 +65,13 @@ class welcomeCustomerViewController: UIViewController {
                         
                     }
                 }
+                
             }
+            
         }
+        
     }
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
