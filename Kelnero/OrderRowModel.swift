@@ -96,4 +96,54 @@ class OrderRowModel: NSObject {
     }
 
     
+    
+    class func getAllOrders(restaurantId restId: String) -> [OrderRow] {
+        var allOrders = [OrderRow]()
+        var whereClause = NSPredicate(format: "%K == %@", restaurantIdField, restId)
+        var query = CKQuery(recordType: recordType, predicate: whereClause)
+        var rest: Restaurant? = nil
+        RestaurantModel.getById(idToSearch: restId) {
+            (r, error) in
+            if let e = error {
+                print(e)
+            }
+            else {
+                rest = r!
+                
+                let container = CKContainer.default()
+                let db = container.publicCloudDatabase
+                
+                db.perform(query, inZoneWith: nil) {
+                    (records, error) in
+                    if let e = error {
+                        print(e)
+                    }
+                    else {
+                        records?.forEach() {
+                            fetchedRecord in
+                            var table = fetchedRecord[tableField] as! Int
+                            DishModel.getDishByName(restaurantId: restId, dishName: fetchedRecord[dishField] as! String) {
+                                (d, error) in
+                                if let e = error {
+                                    print(e)
+                                }
+                                else {
+                                    var quantity = fetchedRecord[quantityField] as! Int
+                                    var state = fetchedRecord[stateField] as! Int
+                                    var o = OrderRow(restaurant: rest!, table: table, dish: d!, quantity: quantity, state: state)
+                                    orders.append(o)
+                                    print("Retrieved order \(o)")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return orders
+    }
+    
+    
+    
+    
 }
