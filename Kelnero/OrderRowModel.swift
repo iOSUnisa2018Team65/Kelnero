@@ -142,4 +142,19 @@ class OrderRowModel: NSObject {
         return orders
     }
     
+    
+    
+    
+    class func delete(orderRow orderRow: OrderRow, completionHandler handler: @escaping (Error?)->Void) {
+        let container = CKContainer.default()
+        let db = container.publicCloudDatabase
+        var key = orderRow.restaurant.id.description + "_" + orderRow.table.description + "_" + orderRow.dish.name
+        var id = CKRecordID(recordName: key)
+        db.delete(withRecordID: id) {
+            (record, error) in
+            handler(error)
+        }
+    }
+    
+    
 }

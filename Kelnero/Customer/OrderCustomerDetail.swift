@@ -29,8 +29,28 @@ class OrderCustomerDetail: UIViewController {
     @IBAction func deleteDishFromOrder(_ sender: Any) {
         //orders.remove(at: orderIdx!)
         //da implementare icloud
-        //OrderRowModel.remove
-        _ = navigationController?.popViewController(animated: true)
+        OrderRowModel.delete(orderRow: order!) {
+            error in
+            if let e = error {
+                print(e)
+                let alert = UIAlertController(title: "Cannot delete order", message: "An error has occurred", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) {
+                    (action) in
+                    self.navigationController?.popViewController(animated: true)
+                    })
+                self.present(alert, animated: true)
+            }
+            else {
+                print("OK")
+                let alert = UIAlertController(title: "Deleted", message: "Dish removed from order", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) {
+                    (action) in
+                    self.navigationController?.popViewController(animated: true)
+                    })
+                    self.present(alert, animated: true)
+            }
+        }
+        
     }
  
     override func viewDidLoad() {
