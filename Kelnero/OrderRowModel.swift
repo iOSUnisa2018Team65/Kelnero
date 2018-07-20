@@ -96,6 +96,7 @@ class OrderRowModel: NSObject {
     }
 
     
+    
     class func getAllOrders(restaurantId restId: String) -> [OrderRow] {
         var allOrders = [OrderRow]()
         var whereClause = NSPredicate(format: "%K == %@", restaurantIdField, restId)
@@ -141,8 +142,6 @@ class OrderRowModel: NSObject {
         }
         return orders
     }
-    
-    
     
     
     class func delete(orderRow orderRow: OrderRow, completionHandler handler: @escaping (Error?)->Void) {
