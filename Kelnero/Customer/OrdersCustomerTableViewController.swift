@@ -9,6 +9,7 @@
 import UIKit
 
 
+let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
 public extension UIView {
     public func round() {
@@ -29,24 +30,36 @@ class OrdersCustomerTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func refreshButton(_ sender: Any) {
+        orders = []
+        
+        activityIndicator.startAnimating()
+        tableView.separatorStyle = .none
+
+            DispatchQueue.main.async {
+                Thread.sleep(forTimeInterval: 3)
+
+                    self.tableView.separatorStyle = .singleLine
+                    self.tableView.reloadData()
+                
+       }
+        
+        
+        orders = OrderRowModel.getAllOrders(restaurantId: "46da4a3ab2106811eecd8e73ea204468")
+   
+        
+        
+        self.tableView.reloadData()
+        activityIndicator.stopAnimating()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-         /* Da fixare il fetch 
-        OrderRowModel.getAllOrderRowsByTable(restaurantId: "46da4a3ab2106811eecd8e73ea204468", tableNumber: 2) {
-            (ordersList, error) in
-                if let e = error {
-//                    gestisci errore
-                }
-                else {
-                    orders = ordersList
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
 
-                }
-            
-        }*/
         
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        view.addSubview(activityIndicator)
+        view.bringSubview(toFront: activityIndicator)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,6 +71,7 @@ class OrdersCustomerTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.isEditing = false
+        
         tableView.reloadData()
         
     }
