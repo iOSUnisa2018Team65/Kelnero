@@ -8,7 +8,11 @@
 
 import UIKit
 
-
+extension String {
+    func matches(_ regex: String) -> Bool {
+        return self.range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+    }
+}
 
 class welcomeCustomerViewController: UIViewController {
     
@@ -46,6 +50,7 @@ class welcomeCustomerViewController: UIViewController {
                 bool = false
             }
             var str = qrCode
+            if str.matches("[A-Za-z0-9]{32}_[0-9]") {
             // var str = "46da4a3ab2106811eecd8e73ea204468_2" //used in debug when no qr code available
             restaurantKey = String(str.split(separator: "_")[0])
             tableNumber = String(str.split(separator: "_")[1])
@@ -69,6 +74,11 @@ class welcomeCustomerViewController: UIViewController {
                     }
                 }
                 
+            }
+            }
+            else {
+                spinner.stopAnimating()
+                restaurantNameLabel.text = "Invalid QR code"
             }
             
         }
