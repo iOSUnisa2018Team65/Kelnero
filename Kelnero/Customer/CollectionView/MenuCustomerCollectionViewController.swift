@@ -10,15 +10,6 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-let restaurant = Restaurant(ownerIcloudId: "_33caratteri", name: "Da Mario", address: "Via Mario Rossi")
-
-let carbonara = Dish(restaurant: restaurant, name: "Carbonara", price: 7, description: "Carbonara bella", category: "Primi")
-let pizza = Dish(restaurant: restaurant, name: "Pizza", price: 5, description: "Margherita",category: "Primi")
-
-let tiramisu = Dish(restaurant: restaurant, name: "Tiramisù", price: 8, description: "Tiramisù buono", category: "Desserts")
-
-var primiPiatti = [Dish]()
-var desserts = [Dish]()
 //var menu = [
 //    primiPiatti,
 //    desserts

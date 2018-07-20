@@ -23,10 +23,7 @@ class OrdersCustomerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let pizzaorder = OrderRow(restaurant: restaurant, table: 2, dish: pizza, quantity: 2, state: 2)
-        orders.append(pizzaorder)
-        
-        /* Da fixare il fetch 
+         /* Da fixare il fetch 
         OrderRowModel.getAllOrderRowsByTable(restaurantId: "46da4a3ab2106811eecd8e73ea204468", tableNumber: 2) {
             (ordersList, error) in
                 if let e = error {

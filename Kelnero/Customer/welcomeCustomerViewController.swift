@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class welcomeCustomerViewController: UIViewController {
     
     var qrCode: String = ""
@@ -57,6 +59,7 @@ class welcomeCustomerViewController: UIViewController {
                 }
                 else { // SUCCESS
                     var restaurantName = r!.name
+                    restaurant = r!
                     DispatchQueue.main.async {
                         self.spinner.stopAnimating()
                         self.image.image = UIImage(named: "table")
