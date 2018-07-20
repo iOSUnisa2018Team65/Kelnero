@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 var orders = [OrderRow]()
+var restaurant: Restaurant?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         orders = OrderRowModel.getAllOrders(restaurantId: "46da4a3ab2106811eecd8e73ea204468")
+        RestaurantModel.getById(idToSearch: "46da4a3ab2106811eecd8e73ea204468") {
+            (r, error) in
+            if let e = error {
+                print(e)
+            }
+            else {
+                restaurant = r!
+            }
+        }
         return true
     }
 

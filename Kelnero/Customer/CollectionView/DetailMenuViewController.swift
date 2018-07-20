@@ -28,20 +28,31 @@ class DetailMenuViewController: UIViewController {
             quantity = Int(quantityLabel.text!)!
 
         }
-        let newOrder: OrderRow = OrderRow(restaurant: restaurant, table: 2, dish: dishDetail!, quantity: quantity, state: 1)
+        let newOrder: OrderRow = OrderRow(restaurant: restaurant!, table: 2, dish: dishDetail!, quantity: quantity, state: 1)
         
-        orders.append(newOrder)
+//        orders.append(newOrder)
         //implementare icloud
-//        OrderRowModel.addNew(orderRow: newOrder, completionHandler: <#T##(OrderRow, Error?) -> Void#>)
-        
-        let alert = UIAlertController(title: "Added to orders", message: "Go in orders tab to manage your orders", preferredStyle: .alert)
-        
-        let gobackalert = UIAlertAction(title: "Return to menu", style: .default){ (action:UIAlertAction!) in
-            self.navigationController?.popViewController(animated: true)
+        OrderRowModel.addNew(orderRow: newOrder) {
+            (o, error) in
+            if let e = error {
+                print(e)
+                let alert = UIAlertController(title: "Cannot make order", message: "An error has occurred", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+            else {
+                
+                let alert = UIAlertController(title: "Added to orders", message: "Go in orders tab to manage your orders", preferredStyle: .alert)
+                
+                let gobackalert = UIAlertAction(title: "Return to menu", style: .default){ (action:UIAlertAction!) in
+                    self.navigationController?.popViewController(animated: true)
+                }
+                
+                alert.addAction(gobackalert)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
-      
-        alert.addAction(gobackalert)
-        self.present(alert, animated: true, completion: nil)
+        
     }
     
     override func viewDidLoad() {
