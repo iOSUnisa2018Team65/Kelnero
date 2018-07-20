@@ -146,9 +146,21 @@ class qrCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         
         sleep(UInt32(0.5)) //wait half second
     
+        if codeFinal.matches("[A-Za-z0-9]{32}_[0-9]") {
         DispatchQueue.main.async{   //makes the main asynchronous
             self.dismiss(animated: false, completion: {})
             self.performSegue(withIdentifier: "welcomeCustomer", sender: nil)
+        }
+        }
+        else {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Invalid QR code", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) {
+                    action in
+                     self.viewDidLoad()
+                    })
+                self.present(alert, animated: true)
+            }
         }
 
     }
