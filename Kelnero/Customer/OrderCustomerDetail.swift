@@ -27,7 +27,7 @@ class OrderCustomerDetail: UIViewController {
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     @IBAction func deleteDishFromOrder(_ sender: Any) {
-        orders.remove(at: orderIdx!)
+        //orders.remove(at: orderIdx!)
         //da implementare icloud
         //OrderRowModel.remove
         _ = navigationController?.popViewController(animated: true)
